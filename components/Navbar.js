@@ -3,6 +3,7 @@ import Link from 'next/link'
 import {BsCart2} from 'react-icons/bs'
 import {AiFillCloseSquare, AiFillPlusCircle, AiFillMinusCircle} from 'react-icons/ai'
 import {BsBagCheck} from 'react-icons/bs'
+import {FiTrash2} from 'react-icons/fi'
 
 const Navbar = () => {
   // This function is used to toggle cart
@@ -47,7 +48,7 @@ const Navbar = () => {
       <div ref={ref} className="sidebar h-full z-10 shadow-xl  fixed top-0 right-0 bg-orange-200 py-10 md:w-2/6 px-8 w-3/5 transform transition-transform translate-x-full">
         <h2 className="text-xl font-bold">Shopping Cart</h2>
         <span onClick={toggleCart} className="absolute top-5 right-2 text-2xl cursor-pointer"><AiFillCloseSquare/></span>
-        <ol className="list-decimal">
+        <ol className="list-decimal mt-7">
           <li className="my-2">
             <div className="flex">
               <div className="w-2/3">Tshirt - Green Topper</div>
@@ -58,10 +59,15 @@ const Navbar = () => {
           </li>
         </ol>
 
-        <button class="flex mx-auto mt-16 text-white bg-red-500 border-0 py-2 px-8 focus:outline-none hover:bg-red-600 rounded text-lg">
-          <BsBagCheck className="my-1 mr-5"/> Checkout
-        </button>
+        <div className="flex flex-col md:flex-row mt-10">
+          <button class="flex mr-3 text-white bg-green-600 border-0 py-2 px-5 focus:outline-none hover:bg-green-700 rounded text-md">
+            <BsBagCheck className="my-1 mr-2"/> Checkout
+          </button>
 
+          <button class="flex md:mt-0 mt-5 text-white bg-red-500 border-0 py-2 px-5 focus:outline-none hover:bg-red-600 rounded text-md">
+            <FiTrash2 className="my-1 mr-2"/> Empty Cart
+          </button>
+        </div>
       </div>
     </div>
   )
