@@ -5,7 +5,8 @@ import {AiFillCloseSquare, AiFillPlusCircle, AiFillMinusCircle} from 'react-icon
 import {BsBagCheck} from 'react-icons/bs'
 import {FiTrash2} from 'react-icons/fi'
 
-const Navbar = () => {
+const Navbar = ({cart, addToCart, removeFromCart, clearCart, subtotal}) => {
+  console.log(cart, addToCart, removeFromCart, clearCart, subtotal)
   // This function is used to toggle cart
   const toggleCart =()=>{
     if(ref.current.classList.contains('translate-x-full')){
@@ -45,18 +46,20 @@ const Navbar = () => {
 
       </div>
 
-      <div ref={ref} className="sidebar h-full z-10 shadow-xl  fixed top-0 right-0 bg-orange-200 py-10 md:w-2/6 px-8 w-3/5 transform transition-transform translate-x-full">
+      <div ref={ref} className="sidebar h-full z-10 shadow-xl  fixed top-0 right-0 bg-orange-100 py-10 md:w-2/6 px-8 w-3/5 transform transition-transform translate-x-full">
         <h2 className="text-xl font-bold">Shopping Cart</h2>
-        <span onClick={toggleCart} className="absolute top-5 right-2 text-2xl cursor-pointer"><AiFillCloseSquare/></span>
+        <span onClick={toggleCart} className="absolute top-5 right-2 text-3xl cursor-pointer text-red-600"><AiFillCloseSquare/></span>
         <ol className="list-decimal mt-7">
-          <li className="my-2">
+          {Object.keys(cart).length == 0 && <div className='text-xl'>No items in the cart</div>}
+          {Object.keys(cart).map((k)=>{ return <li key={k} className="my-2">
             <div className="flex">
-              <div className="w-2/3">Tshirt - Green Topper</div>
-              <div className="w-1/6 flex items-center justify-center text-2xl cursor-pointer"><AiFillMinusCircle/></div>
-              <div className="w-1/6 flex items-center justify-center bg-white">1</div>
-              <div className="w-1/6 flex items-center justify-center text-2xl cursor-pointer"><AiFillPlusCircle/></div>
+              <div className="w-2/3">{cart[k].name}</div>
+              <div onClick={()=>{removeFromCart(k, 1, cart[k].price, cart[k].name, cart[k].size, cart[k].variant)}} className="w-1/6 flex items-center justify-center text-2xl cursor-pointer"><AiFillMinusCircle/></div>
+              <div className="w-1/6 flex items-center justify-center bg-white">{cart[k].qty}</div>
+              <div onClick={()=>{addToCart(k, 1, cart[k].price, cart[k].name, cart[k].size, cart[k].variant)}} className="w-1/6 flex items-center justify-center text-2xl cursor-pointer"><AiFillPlusCircle/></div>
             </div>
-          </li>
+          </li>})}
+
         </ol>
 
         <div className="flex flex-col md:flex-row mt-10">
@@ -64,7 +67,7 @@ const Navbar = () => {
             <BsBagCheck className="my-1 mr-2"/> Checkout
           </button>
 
-          <button className="flex md:mt-0 mt-5 text-white bg-red-500 border-0 py-2 px-5 focus:outline-none hover:bg-red-600 rounded text-md">
+          <button onClick={clearCart} className="flex md:mt-0 mt-5 text-white bg-red-600 border-0 py-2 px-5 focus:outline-none hover:bg-orange-800 rounded text-md">
             <FiTrash2 className="my-1 mr-2"/> Empty Cart
           </button>
         </div>
