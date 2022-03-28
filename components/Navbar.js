@@ -60,11 +60,11 @@ const Navbar = () => {
         </ol>
 
         <div className="flex flex-col md:flex-row mt-10">
-          <button class="flex mr-3 text-white bg-green-600 border-0 py-2 px-5 focus:outline-none hover:bg-green-700 rounded text-md">
+          <button className="flex mr-3 text-white bg-green-600 border-0 py-2 px-5 focus:outline-none hover:bg-green-700 rounded text-md">
             <BsBagCheck className="my-1 mr-2"/> Checkout
           </button>
 
-          <button class="flex md:mt-0 mt-5 text-white bg-red-500 border-0 py-2 px-5 focus:outline-none hover:bg-red-600 rounded text-md">
+          <button className="flex md:mt-0 mt-5 text-white bg-red-500 border-0 py-2 px-5 focus:outline-none hover:bg-red-600 rounded text-md">
             <FiTrash2 className="my-1 mr-2"/> Empty Cart
           </button>
         </div>
