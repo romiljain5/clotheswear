@@ -1,8 +1,8 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import {FaTshirt} from 'react-icons/fa'
-import {GiHoodie} from 'react-icons/gi'
+import { FaTshirt } from "react-icons/fa";
+import { GiHoodie } from "react-icons/gi";
 import { IoBeerSharp, IoExtensionPuzzleSharp } from "react-icons/io5";
 
 export default function Home() {
@@ -14,247 +14,253 @@ export default function Home() {
         <link rel="icon" href="/logo.png" />
       </Head>
 
-      <div style={{'font-family':'Roboto, sans-serif'}} className="bg-hero-image md:px-32 px-10 py-24 md:bg-left-top bg-center">
-        <div className="md:mb-10 mb-5">
-          <p className="md:text-2xl text-lg md:mb-4 mb-2">Discover the new you</p>
-          <p className="md:text-6xl text-3xl font-black capitalize font-black">Top quality clothes only</p>
+      <div
+        style={{ "font-family": "Roboto, sans-serif" }}
+        className="bg-no-repeat bg-cover bg-hero-image md:px-32 px-10 py-24 md:bg-left-top bg-center"
+      >
+        <div className="container mx-auto p-5">
+          <div className="md:mb-10 mb-5">
+            <p className="md:text-2xl text-lg md:mb-4 mb-2">
+              Discover the new you
+            </p>
+            <p className="md:text-6xl text-3xl font-black capitalize font-black">
+              Top quality clothes only
+            </p>
+          </div>
+          <p className="md:text-8xl text-4xl font-black uppercase text-orange-100">
+            Clothes Wear
+          </p>
+          <Link href={"/tshirts"}>
+            <button class="text-white md:text-xl text-md bg-red-600 border-0 py-3 mt-10 px-14 focus:outline-none hover:bg-red-800 rounded-md text-lg">
+              Buy Clothes
+            </button>
+          </Link>
         </div>
-        <p className="md:text-8xl text-4xl font-black uppercase text-orange-100">Clothes Wear</p>
-        <Link href={'/tshirts'}>
-          <button class="text-white md:text-xl text-md bg-red-600 border-0 py-3 mt-10 px-14 focus:outline-none hover:bg-red-800 rounded-md text-lg">Buy Clothes</button>
-        </Link>
       </div>
 
       {/* boxes */}
-      <div className="h-full md:flex p-5 md:space-x-3 space-y-3 md:space-y-0">
+      <div className="h-full md:container mx-auto md:flex p-5 md:space-x-3 space-y-3 md:space-y-0">
         <div className="md:w-1/4 h-auto p-6 pb-10 pt-20 relative rounded-xl bg-gray-800">
-        <FaTshirt className="absolute md:text-7xl text-9xl right-5 md:top-10 bottom-10 text-white opacity-40"/>
+          <FaTshirt className="absolute md:text-7xl text-9xl right-5 md:top-10 bottom-10 text-white opacity-40" />
           <p className="text-lg text-gray-300 font-bold">Look Stylish</p>
           <p className="text-2xl text-white my-1">With</p>
-          <p className="md:text-3xl text-2xl font-black uppercase text-white opacity-30">T-shirts</p>
-          <Link href={'/tshirts'}>
-            <button class="text-white md:text-md text-md bg-red-600 border-0 py-3 mt-5 px-9 focus:outline-none hover:bg-red-800 rounded-full text-sm">Browse</button>
+          <p className="md:text-3xl text-2xl font-black uppercase text-white opacity-30">
+            T-shirts
+          </p>
+          <Link href={"/tshirts"}>
+            <button class="text-white md:text-md text-md bg-red-600 border-0 py-3 mt-5 px-9 focus:outline-none hover:bg-red-800 rounded-full text-sm">
+              Browse
+            </button>
           </Link>
         </div>
 
         <div className="md:w-1/4 h-auto p-6 pb-10 pt-20 relative rounded-xl bg-amber-500">
-        <GiHoodie className="absolute md:text-8xl text-9xl right-5 md:top-10 bottom-10 text-white opacity-40"/>
+          <GiHoodie className="absolute md:text-8xl text-9xl right-5 md:top-10 bottom-10 text-white opacity-40" />
           <p className="text-lg text-gray-300 font-bold">Look Stylish</p>
           <p className="text-2xl text-white my-1">With</p>
-          <p className="md:text-3xl text-2xl font-black uppercase text-white opacity-30">Hoodies</p>
-          <Link href={'/hoodies'}>
-            <button class="text-amber-500 md:text-md text-md bg-white border-0 py-3 mt-5 px-9 focus:outline-none hover:bg-gray-100 rounded-full text-sm">Browse</button>
+          <p className="md:text-3xl text-2xl font-black uppercase text-white opacity-30">
+            Hoodies
+          </p>
+          <Link href={"/hoodies"}>
+            <button class="text-amber-500 md:text-md text-md bg-white border-0 py-3 mt-5 px-9 focus:outline-none hover:bg-gray-100 rounded-full text-sm">
+              Browse
+            </button>
           </Link>
         </div>
 
         <div className="md:w-2/4 relative h-auto p-6 pb-10 pt-20 rounded-xl bg-red-600">
-        <IoExtensionPuzzleSharp className="absolute text-9xl right-5 bottom-10 text-gray-100 opacity-70"/>
+          <IoExtensionPuzzleSharp className="absolute text-9xl right-5 bottom-10 text-gray-100 opacity-70" />
           <p className="text-lg text-gray-300 font-bold">Look Stylish</p>
           <p className="text-2xl text-white my-1">With</p>
-          <p className="md:text-3xl text-2xl font-black uppercase text-white opacity-30">Stickers</p>
-          <Link href={'/stickers'}>
-            <button class="text-red-600 md:text-md text-md bg-white border-0 py-3 mt-5 px-9 focus:outline-none hover:bg-gray-100 rounded-full text-sm">Browse</button>
+          <p className="md:text-3xl text-2xl font-black uppercase text-white opacity-30">
+            Stickers
+          </p>
+          <Link href={"/stickers"}>
+            <button class="text-red-600 md:text-md text-md bg-white border-0 py-3 mt-5 px-9 focus:outline-none hover:bg-gray-100 rounded-full text-sm">
+              Browse
+            </button>
           </Link>
         </div>
       </div>
 
-      <div className="h-full md:flex p-5 pt-0 md:space-x-3 space-y-3 md:space-y-0">
-        
-      <div className="md:w-2/4 relative h-auto p-6 pb-10 pt-20 rounded-xl bg-gray-300">
-        <IoBeerSharp className="absolute text-9xl right-10 bottom-10"/>
+      <div className="h-full md:container mx-auto md:flex p-5 pt-0 md:space-x-3 space-y-3 md:space-y-0">
+        <div className="md:w-2/4 relative h-auto p-6 pb-10 pt-20 rounded-xl bg-gray-300">
+          <IoBeerSharp className="absolute text-9xl right-10 bottom-10" />
           <p className="text-lg text-black font-bold">Look Stylish</p>
           <p className="text-2xl text-black my-1">With</p>
-          <p className="md:text-3xl text-2xl font-black uppercase text-white opacity-80">Mugs</p>
-          <Link href={'/mugs'}>
-            <button class="text-gray-300 md:text-md text-md bg-black border-0 py-3 mt-5 px-9 focus:outline-none hover:bg-gray-800 rounded-full text-sm">Browse</button>
+          <p className="md:text-3xl text-2xl font-black uppercase text-white opacity-80">
+            Mugs
+          </p>
+          <Link href={"/mugs"}>
+            <button class="text-gray-300 md:text-md text-md bg-black border-0 py-3 mt-5 px-9 focus:outline-none hover:bg-gray-800 rounded-full text-sm">
+              Browse
+            </button>
           </Link>
         </div>
-        
+
         <div className="md:w-1/4 h-auto p-6 pb-10 relative pt-20 rounded-xl bg-green-500">
-        <FaTshirt className="absolute md:text-7xl text-9xl right-5 md:top-10 bottom-10 text-white opacity-40"/>
+          <FaTshirt className="absolute md:text-7xl text-9xl right-5 md:top-10 bottom-10 text-white opacity-40" />
           <p className="text-lg text-white">Look Stylish</p>
           <p className="text-2xl text-white my-1">With</p>
-          <p className="md:text-3xl text-2xl font-black uppercase text-white opacity-30">T-shirts</p>
-          <Link href={'/tshirts'}>
-            <button class="text-green-500 md:text-md text-md bg-white border-0 py-3 mt-5 px-9 focus:outline-none hover:bg-gray-200 rounded-full text-sm">Browse</button>
+          <p className="md:text-3xl text-2xl font-black uppercase text-white opacity-30">
+            T-shirts
+          </p>
+          <Link href={"/tshirts"}>
+            <button class="text-green-500 md:text-md text-md bg-white border-0 py-3 mt-5 px-9 focus:outline-none hover:bg-gray-200 rounded-full text-sm">
+              Browse
+            </button>
           </Link>
         </div>
 
         <div className="md:w-1/4 relative h-auto p-6 pb-10 pt-20 rounded-xl bg-blue-600">
-        <FaTshirt className="absolute md:text-7xl text-9xl right-5 md:top-10 bottom-10 text-white opacity-40"/>
+          <FaTshirt className="absolute md:text-7xl text-9xl right-5 md:top-10 bottom-10 text-white opacity-40" />
           <p className="text-lg text-gray-300">Look Stylish</p>
           <p className="text-2xl text-white my-1">With</p>
-          <p className="md:text-3xl text-2xl font-black uppercase text-white opacity-30">T-shirts</p>
-          <Link href={'/tshirts'}>
-            <button class="text-blue-600 md:text-md text-md bg-white border-0 py-3 mt-5 px-9 focus:outline-none hover:bg-gray-100 rounded-full text-sm">Browse</button>
+          <p className="md:text-3xl text-2xl font-black uppercase text-white opacity-30">
+            T-shirts
+          </p>
+          <Link href={"/tshirts"}>
+            <button class="text-blue-600 md:text-md text-md bg-white border-0 py-3 mt-5 px-9 focus:outline-none hover:bg-gray-100 rounded-full text-sm">
+              Browse
+            </button>
           </Link>
         </div>
       </div>
-      
 
       {/* content boxes */}
-      <section className="text-gray-600 body-font">
-        <div className="container px-5 py-24 mx-auto">
-          <div className="flex flex-wrap w-full mb-20 flex-col items-center text-center">
-            <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">
-              Want clothes, Why not ClothesWear??
+      <section class="text-gray-600 body-font">
+        <div
+          style={{ "font-family": "Roboto, sans-serif" }}
+          class="container px-5 py-24 mx-auto"
+        >
+          <div class="flex flex-col text-center w-full mb-10">
+            <h1 class="sm:text-3xl font-bold text-2xl font-medium title-font mb-4 text-gray-900">
+              Want clothes, Why not ClothesWear ??
             </h1>
-            <p className="lg:w-1/2 w-full leading-relaxed text-gray-500">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore minus in velit ut perferendis possimus at recusandae.
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
+              Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical
+              gentrify, subway tile poke farm-to-table. Franzen you probably
+              haven't heard of them man bun deep jianbing selfies heirloom prism
+              food truck ugh squid celiac humblebrag.
             </p>
           </div>
-          <div className="flex flex-wrap -m-4">
-            <div className="xl:w-1/3 md:w-1/2 p-4">
-              <div className="border border-gray-200 p-6 rounded-lg">
-                <div className="w-10 h-10 inline-flex items-center justify-center rounded-full bg-red-100 text-red-500 mb-4">
-                  <svg
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    className="w-6 h-6"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                  </svg>
-                </div>
-                <h2 className="text-lg text-gray-900 font-medium title-font mb-2">
-                  Shooting Stars
+          <div class="flex flex-wrap -m-4 text-center">
+            <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+              <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  class="text-red-500 w-12 h-12 mb-3 inline-block"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M8 17l4 4 4-4m-4-5v9"></path>
+                  <path d="M20.88 18.09A5 5 0 0018 9h-1.26A8 8 0 103 16.29"></path>
+                </svg>
+                <h2 class="title-font font-medium text-3xl text-gray-900">
+                  126K
                 </h2>
-                <p className="leading-relaxed text-base">
-                  Fingerstache flexitarian street art 8-bit waist co, subway
-                  tile poke farm.
-                </p>
+                <p class="leading-relaxed">Customers</p>
               </div>
             </div>
-            <div className="xl:w-1/3 md:w-1/2 p-4">
-              <div className="border border-gray-200 p-6 rounded-lg">
-                <div className="w-10 h-10 inline-flex items-center justify-center rounded-full bg-red-100 text-red-500 mb-4">
-                  <svg
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    className="w-6 h-6"
-                    viewBox="0 0 24 24"
-                  >
-                    <circle cx="6" cy="6" r="3"></circle>
-                    <circle cx="6" cy="18" r="3"></circle>
-                    <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
-                  </svg>
-                </div>
-                <h2 className="text-lg text-gray-900 font-medium title-font mb-2">
-                  The Catalyzer
+            <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+              <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  class="text-red-500 w-12 h-12 mb-3 inline-block"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
+                </svg>
+                <h2 class="title-font font-medium text-3xl text-gray-900">
+                  100+
                 </h2>
-                <p className="leading-relaxed text-base">
-                  Fingerstache flexitarian street art 8-bit waist co, subway
-                  tile poke farm.
-                </p>
+                <p class="leading-relaxed">Brands</p>
               </div>
             </div>
-            <div className="xl:w-1/3 md:w-1/2 p-4">
-              <div className="border border-gray-200 p-6 rounded-lg">
-                <div className="w-10 h-10 inline-flex items-center justify-center rounded-full bg-red-100 text-red-500 mb-4">
-                  <svg
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    className="w-6 h-6"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-                    <circle cx="12" cy="7" r="4"></circle>
-                  </svg>
-                </div>
-                <h2 className="text-lg text-gray-900 font-medium title-font mb-2">
-                  Neptune
+            <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+              <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  class="text-red-500 w-12 h-12 mb-3 inline-block"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M3 18v-6a9 9 0 0118 0v6"></path>
+                  <path d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3z"></path>
+                </svg>
+                <h2 class="title-font font-medium text-3xl text-gray-900">
+                  30+
                 </h2>
-                <p className="leading-relaxed text-base">
-                  Fingerstache flexitarian street art 8-bit waist co, subway
-                  tile poke farm.
-                </p>
+                <p class="leading-relaxed">Types of clothes</p>
               </div>
             </div>
-            <div className="xl:w-1/3 md:w-1/2 p-4">
-              <div className="border border-gray-200 p-6 rounded-lg">
-                <div className="w-10 h-10 inline-flex items-center justify-center rounded-full bg-red-100 text-red-500 mb-4">
-                  <svg
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    className="w-6 h-6"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1zM4 22v-7"></path>
-                  </svg>
-                </div>
-                <h2 className="text-lg text-gray-900 font-medium title-font mb-2">
-                  Melanchole
+            <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+              <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  class="text-red-500 w-12 h-12 mb-3 inline-block"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+                <h2 class="title-font font-medium text-3xl text-gray-900">
+                  90%
                 </h2>
-                <p className="leading-relaxed text-base">
-                  Fingerstache flexitarian street art 8-bit waist co, subway
-                  tile poke farm.
-                </p>
-              </div>
-            </div>
-            <div className="xl:w-1/3 md:w-1/2 p-4">
-              <div className="border border-gray-200 p-6 rounded-lg">
-                <div className="w-10 h-10 inline-flex items-center justify-center rounded-full bg-red-100 text-red-500 mb-4">
-                  <svg
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    className="w-6 h-6"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
-                  </svg>
-                </div>
-                <h2 className="text-lg text-gray-900 font-medium title-font mb-2">
-                  Bunker
-                </h2>
-                <p className="leading-relaxed text-base">
-                  Fingerstache flexitarian street art 8-bit waist co, subway
-                  tile poke farm.
-                </p>
-              </div>
-            </div>
-            <div className="xl:w-1/3 md:w-1/2 p-4">
-              <div className="border border-gray-200 p-6 rounded-lg">
-                <div className="w-10 h-10 inline-flex items-center justify-center rounded-full bg-red-100 text-red-500 mb-4">
-                  <svg
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    className="w-6 h-6"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                  </svg>
-                </div>
-                <h2 className="text-lg text-gray-900 font-medium title-font mb-2">
-                  Ramona Falls
-                </h2>
-                <p className="leading-relaxed text-base">
-                  Fingerstache flexitarian street art 8-bit waist co, subway
-                  tile poke farm.
-                </p>
+                <p class="leading-relaxed">Returning Customers</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
+      {/* Tshirt area */}
+      <div className="h-full md:container mt-14 mx-auto md:flex p-5 pt-0 md:space-x-3 space-y-3 md:space-y-0">
+        <div className="md:w-full md:flex relative h-auto p-6 pb-10 pt-20 rounded-xl bg-red-600">
+          <div className="md:w-2/3 md:ml-10 space-y-3 relative">
+            <p className="text-lg text-white w-2/3">30 % OFF</p>
+            <p className="md:text-7xl text-6xl leading-2 font-black uppercase text-white">
+              Sports <br /> Wear
+            </p>
+            <img
+              src="/tshirt.png"
+              className="absolute drop-shadow-2xl bottom-5 md:right-40 md:left-auto left-52"
+              alt=""
+            />
+            <p className="text-lg text-white w-2/3">2 April to 10 April</p>
+          </div>
+          <div className="md:w-1/3 mt-14 md:mt-0">
+            <p className="text-lg text-white font-medium tracking-wide">
+              Clothes Wear
+            </p>
+            <p className="text-5xl text-white font-bold my-3">Summer Sale</p>
+            <p className="text-lg text-white md:w-2/3">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora,
+              tempore.
+            </p>
+            <Link href={"/tshirts"}>
+              <button class="text-red-600 md:text-md text-md font-bold bg-white border-0 py-3 mt-5 px-9 focus:outline-none hover:bg-gray-200 rounded-full text-sm">
+                Browse
+              </button>
+            </Link>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

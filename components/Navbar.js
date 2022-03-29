@@ -46,7 +46,7 @@ const Navbar = ({cart, addToCart, removeFromCart, clearCart, subtotal}) => {
 
       </div>
 
-      <div ref={ref} className="sidebar h-full z-10 shadow-xl  fixed top-0 right-0 bg-orange-100 py-10 md:w-2/6 px-8 w-3/5 transform transition-transform translate-x-full">
+      <div ref={ref} className="sidebar h-full z-10 shadow-xl  fixed top-0 right-0 bg-gray-300 py-10 md:w-2/6 px-8 w-3/5 transform transition-transform translate-x-full">
         <h2 className="text-xl font-bold">Shopping Cart</h2>
         <span onClick={toggleCart} className="absolute top-5 right-2 text-3xl cursor-pointer text-red-600"><AiFillCloseSquare/></span>
         <ol className="list-decimal mt-7">
