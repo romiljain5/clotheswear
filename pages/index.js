@@ -66,7 +66,7 @@ export default function Home() {
           <p className="text-2xl text-black my-1">With</p>
           <p className="md:text-3xl text-2xl font-black uppercase text-white opacity-80">Mugs</p>
           <Link href={'/mugs'}>
-            <button class="text-gray-300 md:text-md text-md bg-black border-0 py-3 mt-5 px-9 focus:outline-none hover:bg-gray-100 rounded-full text-sm">Browse</button>
+            <button class="text-gray-300 md:text-md text-md bg-black border-0 py-3 mt-5 px-9 focus:outline-none hover:bg-gray-800 rounded-full text-sm">Browse</button>
           </Link>
         </div>
         
@@ -76,7 +76,7 @@ export default function Home() {
           <p className="text-2xl text-white my-1">With</p>
           <p className="md:text-3xl text-2xl font-black uppercase text-white opacity-30">T-shirts</p>
           <Link href={'/tshirts'}>
-            <button class="text-green-500 md:text-md text-md bg-white border-0 py-3 mt-5 px-9 focus:outline-none hover:bg-red-800 rounded-full text-sm">Browse</button>
+            <button class="text-green-500 md:text-md text-md bg-white border-0 py-3 mt-5 px-9 focus:outline-none hover:bg-gray-200 rounded-full text-sm">Browse</button>
           </Link>
         </div>
 
