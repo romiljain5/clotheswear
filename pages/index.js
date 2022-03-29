@@ -1,5 +1,9 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
+import {FaTshirt} from 'react-icons/fa'
+import {GiHoodie} from 'react-icons/gi'
+import { IoBeerSharp, IoExtensionPuzzleSharp } from "react-icons/io5";
 
 export default function Home() {
   return (
@@ -10,9 +14,83 @@ export default function Home() {
         <link rel="icon" href="/logo.png" />
       </Head>
 
-      <div>
-        <img src="/main-head.jpg" alt="" />
+      <div style={{'font-family':'Roboto, sans-serif'}} className="bg-hero-image md:px-32 px-10 py-24 md:bg-left-top bg-center">
+        <div className="md:mb-10 mb-5">
+          <p className="md:text-2xl text-lg md:mb-4 mb-2">Discover the new you</p>
+          <p className="md:text-6xl text-3xl font-black capitalize font-black">Top quality clothes only</p>
+        </div>
+        <p className="md:text-8xl text-4xl font-black uppercase text-orange-100">Clothes Wear</p>
+        <Link href={'/tshirts'}>
+          <button class="text-white md:text-xl text-md bg-red-600 border-0 py-3 mt-10 px-14 focus:outline-none hover:bg-red-800 rounded-md text-lg">Buy Clothes</button>
+        </Link>
       </div>
+
+      {/* boxes */}
+      <div className="h-full md:flex p-5 md:space-x-3 space-y-3 md:space-y-0">
+        <div className="md:w-1/4 h-auto p-6 pb-10 pt-20 relative rounded-xl bg-gray-800">
+        <FaTshirt className="absolute md:text-7xl text-9xl right-5 md:top-10 bottom-10 text-white opacity-40"/>
+          <p className="text-lg text-gray-300 font-bold">Look Stylish</p>
+          <p className="text-2xl text-white my-1">With</p>
+          <p className="md:text-3xl text-2xl font-black uppercase text-white opacity-30">T-shirts</p>
+          <Link href={'/tshirts'}>
+            <button class="text-white md:text-md text-md bg-red-600 border-0 py-3 mt-5 px-9 focus:outline-none hover:bg-red-800 rounded-full text-sm">Browse</button>
+          </Link>
+        </div>
+
+        <div className="md:w-1/4 h-auto p-6 pb-10 pt-20 relative rounded-xl bg-amber-500">
+        <GiHoodie className="absolute md:text-8xl text-9xl right-5 md:top-10 bottom-10 text-white opacity-40"/>
+          <p className="text-lg text-gray-300 font-bold">Look Stylish</p>
+          <p className="text-2xl text-white my-1">With</p>
+          <p className="md:text-3xl text-2xl font-black uppercase text-white opacity-30">Hoodies</p>
+          <Link href={'/hoodies'}>
+            <button class="text-amber-500 md:text-md text-md bg-white border-0 py-3 mt-5 px-9 focus:outline-none hover:bg-gray-100 rounded-full text-sm">Browse</button>
+          </Link>
+        </div>
+
+        <div className="md:w-2/4 relative h-auto p-6 pb-10 pt-20 rounded-xl bg-red-600">
+        <IoExtensionPuzzleSharp className="absolute text-9xl right-5 bottom-10 text-gray-100 opacity-70"/>
+          <p className="text-lg text-gray-300 font-bold">Look Stylish</p>
+          <p className="text-2xl text-white my-1">With</p>
+          <p className="md:text-3xl text-2xl font-black uppercase text-white opacity-30">Stickers</p>
+          <Link href={'/stickers'}>
+            <button class="text-red-600 md:text-md text-md bg-white border-0 py-3 mt-5 px-9 focus:outline-none hover:bg-gray-100 rounded-full text-sm">Browse</button>
+          </Link>
+        </div>
+      </div>
+
+      <div className="h-full md:flex p-5 pt-0 md:space-x-3 space-y-3 md:space-y-0">
+        
+      <div className="md:w-2/4 relative h-auto p-6 pb-10 pt-20 rounded-xl bg-gray-300">
+        <IoBeerSharp className="absolute text-9xl right-10 bottom-10"/>
+          <p className="text-lg text-black font-bold">Look Stylish</p>
+          <p className="text-2xl text-black my-1">With</p>
+          <p className="md:text-3xl text-2xl font-black uppercase text-white opacity-80">Mugs</p>
+          <Link href={'/mugs'}>
+            <button class="text-gray-300 md:text-md text-md bg-black border-0 py-3 mt-5 px-9 focus:outline-none hover:bg-gray-100 rounded-full text-sm">Browse</button>
+          </Link>
+        </div>
+        
+        <div className="md:w-1/4 h-auto p-6 pb-10 relative pt-20 rounded-xl bg-green-500">
+        <FaTshirt className="absolute md:text-7xl text-9xl right-5 md:top-10 bottom-10 text-white opacity-40"/>
+          <p className="text-lg text-white">Look Stylish</p>
+          <p className="text-2xl text-white my-1">With</p>
+          <p className="md:text-3xl text-2xl font-black uppercase text-white opacity-30">T-shirts</p>
+          <Link href={'/tshirts'}>
+            <button class="text-green-500 md:text-md text-md bg-white border-0 py-3 mt-5 px-9 focus:outline-none hover:bg-red-800 rounded-full text-sm">Browse</button>
+          </Link>
+        </div>
+
+        <div className="md:w-1/4 relative h-auto p-6 pb-10 pt-20 rounded-xl bg-blue-600">
+        <FaTshirt className="absolute md:text-7xl text-9xl right-5 md:top-10 bottom-10 text-white opacity-40"/>
+          <p className="text-lg text-gray-300">Look Stylish</p>
+          <p className="text-2xl text-white my-1">With</p>
+          <p className="md:text-3xl text-2xl font-black uppercase text-white opacity-30">T-shirts</p>
+          <Link href={'/tshirts'}>
+            <button class="text-blue-600 md:text-md text-md bg-white border-0 py-3 mt-5 px-9 focus:outline-none hover:bg-gray-100 rounded-full text-sm">Browse</button>
+          </Link>
+        </div>
+      </div>
+      
 
       {/* content boxes */}
       <section className="text-gray-600 body-font">
