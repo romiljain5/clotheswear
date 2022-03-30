@@ -63,9 +63,11 @@ const Navbar = ({cart, addToCart, removeFromCart, clearCart, subtotal}) => {
         </ol>
 
         <div className="flex flex-col md:flex-row mt-10">
+          <Link href={'/checkout'}>
           <button className="flex mr-3 text-white bg-green-600 border-0 py-2 px-5 focus:outline-none hover:bg-green-700 rounded text-md">
             <BsBagCheck className="my-1 mr-2"/> Checkout
           </button>
+          </Link>
 
           <button onClick={clearCart} className="flex md:mt-0 mt-5 text-white bg-red-600 border-0 py-2 px-5 focus:outline-none hover:bg-orange-800 rounded text-md">
             <FiTrash2 className="my-1 mr-2"/> Empty Cart
