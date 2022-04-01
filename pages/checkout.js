@@ -1,15 +1,19 @@
 import React from "react";
 import {IoIosArrowDown} from "react-icons/io"
+import {AiFillPlusCircle, AiFillMinusCircle} from 'react-icons/ai'
+import {BsBagCheck} from 'react-icons/bs'
+import {FiTrash2} from 'react-icons/fi'
+import Link from 'next/link'
 
-const Checkout = () => {
+const Checkout = ({cart, addToCart, removeFromCart, clearCart, subtotal}) => {
   return (
-    <div className="p-20 container md:w-2/3 m-auto">
+    <div className="md:p-20 p-5 container md:w-2/3 m-auto">
       <div className="bg-white md:ml-auto md:py-8 mt-8 md:mt-0">
-        <h2 className="text-gray-900 text-lg mb-1 font-medium title-font">
+        <h2 className="text-gray-900 text-xl font-bold mb-1 font-medium title-font">
           Checkout
         </h2>
         <p classNameName="leading-relaxed mb-5 text-gray-600">
-          Post-ironic portland shabby chic echo park, banjo fashion axe
+          Please fill the details below
         </p>
         <div className="md:flex w-full md:space-x-5 mt-5">
           <div className="md:w-1/2 mb-4">
@@ -118,23 +122,40 @@ const Checkout = () => {
           </div>
         </div>
 
-        <div className="w-full flex mt-5">
-          <div className="w-1/2">
-            <button className="text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded text-lg">
-              Back to cart
-            </button>
-          </div>
-          <div className="w-1/2 flex justify-end">
-            <button className="text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded text-lg">
-              Next
+      </div>
+
+
+      {/* Review cart items */}
+      <div className="h-full mt-10 w-full">
+        <h2 className="text-xl font-bold">Review Shopping Cart</h2>
+        <ol className="list-decimal mt-7 p-5">
+          {Object.keys(cart).length == 0 && <div className='text-xl'>No items in the cart</div>}
+          {Object.keys(cart).map((k)=>{ return <li key={k} className="my-2">
+            <div className="flex md:text-lg text-sm">
+              <div className="w-5/6">{cart[k].name}</div>
+              <div onClick={()=>{removeFromCart(k, 1, cart[k].price, cart[k].name, cart[k].size, cart[k].variant)}} className="w-10 flex items-center justify-center text-2xl cursor-pointer"><AiFillMinusCircle/></div>
+              <div className="w-10 flex items-center justify-center bg-white">{cart[k].qty}</div>
+              <div onClick={()=>{addToCart(k, 1, cart[k].price, cart[k].name, cart[k].size, cart[k].variant)}} className="w-10 flex items-center justify-center text-2xl cursor-pointer"><AiFillPlusCircle/></div>
+            </div>
+          </li>})}
+        </ol>
+
+        <div className="mt-10 md:text-lg text-sm border-2 border-green-800 py-2 px-8 text-black">
+          <p>Your subtotal is <span className="font-semibold text-green-700">₹{subtotal}</span> </p>
+        </div>
+
+
+
+        <div className="w-full flex mt-5 space-y-2 md:space-y-0 md:flex-row flex-col">
+          <div className="w-full flex md:justify-end">
+            <button className="text-white bg-red-500 border-0 py-2 px-6 w-full md:w-auto focus:outline-none hover:bg-red-600 rounded text-md">
+              Proceed to pay ₹{subtotal}
             </button>
           </div>
         </div>
-        <p className="text-xs text-gray-500 mt-3">
-          Chicharrones blog helvetica normcore iceland tousled brook viral
-          artisan.
-        </p>
+
       </div>
+      {/* review cart ended */}
     </div>
   );
 };
