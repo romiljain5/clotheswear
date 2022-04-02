@@ -4,6 +4,7 @@ import {BsCart2} from 'react-icons/bs'
 import {AiFillCloseSquare, AiFillPlusCircle, AiFillMinusCircle} from 'react-icons/ai'
 import {BsBagCheck} from 'react-icons/bs'
 import {FiTrash2} from 'react-icons/fi'
+import {MdAccountCircle} from 'react-icons/md'
 
 const Navbar = ({cart, addToCart, removeFromCart, clearCart, subtotal}) => {
   console.log(cart, addToCart, removeFromCart, clearCart, subtotal)
@@ -40,7 +41,12 @@ const Navbar = ({cart, addToCart, removeFromCart, clearCart, subtotal}) => {
         </ul>
       </div>
 
-      <div onClick={toggleCart} className='cart cursor-pointer flex md:ml-auto my-auto justify-center flex-wrap'>
+      <div className='cart text-4xl cursor-pointer flex md:ml-auto my-auto'>
+        <Link href={'/login'}>
+          <MdAccountCircle/>
+        </Link>
+      </div>
+      <div onClick={toggleCart} className='cart cursor-pointer flex md:ml-5 my-auto justify-center flex-wrap'>
           <a><BsCart2 className='text-3xl'/></a>
       </div>
 
