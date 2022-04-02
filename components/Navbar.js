@@ -23,7 +23,7 @@ const Navbar = ({cart, addToCart, removeFromCart, clearCart, subtotal}) => {
   return (
     <div className='shadow-md sticky top-0 bg-white z-10 m-0 p-0'>
       <div className="container justify-start flex flex-col md:flex-row w-full mx-auto py-1">
-      <div className='flex items-center justify-center'>
+      <div className='flex items-center md:justify-center justify-start ml-4 md:ml-0'>
         <Link href={'/'}>
         <a className='flex'>
           <img src="/logo.png" width='40px' alt="" />
@@ -41,13 +41,15 @@ const Navbar = ({cart, addToCart, removeFromCart, clearCart, subtotal}) => {
         </ul>
       </div>
 
-      <div className='cart text-4xl cursor-pointer flex md:ml-auto my-auto'>
-        <Link href={'/login'}>
-          <MdAccountCircle/>
-        </Link>
-      </div>
-      <div onClick={toggleCart} className='cart cursor-pointer flex md:ml-5 my-auto justify-center flex-wrap'>
-          <a><BsCart2 className='text-3xl'/></a>
+      <div className='flex w-auto md:ml-auto absolute md:relative right-2'>
+        <div className='cart text-4xl mr-2 md:mr-0 cursor-pointer w-1/2 justify-center md:justify-end md:w-auto flex md:ml-auto my-auto'>
+          <Link href={'/login'}>
+            <MdAccountCircle/>
+          </Link>
+        </div>
+        <div onClick={toggleCart} className='cart cursor-pointer w-1/2 justify-center md:justify-end md:w-auto flex md:ml-5 my-auto justify-center flex-wrap'>
+            <a><BsCart2 className='text-3xl'/></a>
+        </div>
       </div>
 
       </div>

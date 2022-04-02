@@ -230,7 +230,7 @@ export default function Home() {
       </section>
 
       {/* Tshirt area */}
-      <div className="h-full md:container mt-14 mx-auto md:flex p-5 pt-0 md:space-x-3 space-y-3 md:space-y-0">
+      <div className="h-full md:overflow-visible overflow-x-hidden md:container md:mt-14 mx-auto md:flex p-5 pt-0 md:space-x-3 space-y-3 md:space-y-0">
         <div className="md:w-full md:flex relative h-auto p-6 pb-10 pt-20 rounded-xl bg-red-600">
           <div className="md:w-2/3 md:ml-10 space-y-3 relative">
             <p className="text-lg text-white w-2/3">30 % OFF</p>
@@ -239,7 +239,7 @@ export default function Home() {
             </p>
             <img
               src="/tshirt.png"
-              className="absolute drop-shadow-2xl bottom-5 md:right-40 md:left-auto left-52"
+              className="absolute drop-shadow-2xl md:bottom-0 md:left-56 bottom-0 left-60"
               alt=""
             />
             <p className="text-lg text-white w-2/3">2 April to 10 April</p>
