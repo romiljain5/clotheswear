@@ -10,6 +10,12 @@ npm run dev
 yarn dev
 ```
 
+## Must known points
+- To use MongoDB database use Thunder client to GET, POST and update request via POST request
+- Make .env.local file in root folder and paste this MONGO_URI= mongodb://0.0.0.0:27017/clotheswear
+    -Which is used to store database in mongoDB
+
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
