@@ -15,6 +15,8 @@ yarn dev
 - Make .env.local file in root folder and paste this MONGO_URI= mongodb://0.0.0.0:27017/clotheswear
     -Which is used to store database in mongoDB
 
+- use productdata.json file to add product data in MongoDB compass
+
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 

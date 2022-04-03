@@ -1,0 +1,41 @@
+[{
+    "title": "HRX by Hrithik Roshan",
+    "slug": "clothes-wear",
+    "desc": "Men Grey Solid Rapid Dry Training Tshirts",
+    "img": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/10565552/2020/5/19/aa5e81b6-507f-4679-9ccf-435303a5e6771589896360961-HRX-by-Hrithik-Roshan-Men-Grey-Solid-Rapid-Dry-Training-Tshi-1.jpg",
+    "category": "tshirt",
+    "size": "XL",
+    "color": "grey",
+    "price": 649,
+    "availableQty": 1
+},{
+    "title": "Green Tshirt",
+    "slug": "green-tshirt",
+    "desc": "Women Green Printed Bio-Wash Yoga Tshirts",
+    "img": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/11999804/2020/8/12/1f75ab46-30ed-4ad0-a6e7-3696416cc0811597225616523-HRX-by-Hrithik-Roshan-Women-Tshirts-1071597225614738-1.jpg",
+    "category": "tshirt",
+    "size": "XL",
+    "color": "green",
+    "price": 349,
+    "availableQty": 1
+},{
+    "title": "Basketball Men Black Rapid",
+    "slug": "black-tshirt",
+    "desc": "HRX By Hrithik Roshan Basketball Men Black Rapid-Dry Typography Tshirts",
+    "img": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/15289234/2021/12/3/3030282a-2e97-428e-933f-cfc01dadbbdd1638533992151-HRX-by-Hrithik-Roshan-Men-Tshirts-4361638533991681-1.jpg",
+    "category": "tshirt",
+    "size": "XL",
+    "color": "black",
+    "price": 749,
+    "availableQty": 1
+},{
+    "title": "Yellow printed Tshirt",
+    "slug": "yellow-tshirt",
+    "desc": "Printed Tshirts",
+    "img": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/16321856/2021/12/6/6d50e0a2-2c50-4653-a06b-042a287852841638769904890-HRX-by-Hrithik-Roshan-Men-Tshirts-9251638769904287-1.jpg",
+    "category": "tshirt",
+    "size": "XL",
+    "color": "yellow",
+    "price": 1598,
+    "availableQty": 1
+}]
