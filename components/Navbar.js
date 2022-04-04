@@ -33,11 +33,11 @@ const Navbar = ({cart, addToCart, removeFromCart, clearCart, subtotal}) => {
       </div>
 
       <div className='flex flex-wrap my-3'>
-        <ul className='pl-8 my-auto flex space-x-3 md:py-2 mx-auto'>
-          <Link href={'/tshirts'}><a><li>Tshirts</li></a></Link>
-          <Link href={'/hoodies'}><a><li>Hoodies</li></a></Link>
-          <Link href={'/stickers'}><a><li>Stickers</li></a></Link>
-          <Link href={'/mugs'}><a><li>Mugs</li></a></Link>
+        <ul className='pl-8 my-auto flex space-x-4 md:py-2 mx-auto font-semibold'>
+          <Link href={'/tshirts'}><a className='hover:text-orange-700'><li>Tshirts</li></a></Link>
+          <Link href={'/hoodies'}><a className='hover:text-orange-700'><li>Hoodies</li></a></Link>
+          <Link href={'/stickers'}><a className='hover:text-orange-700'><li>Stickers</li></a></Link>
+          <Link href={'/mugs'}><a className='hover:text-orange-700'><li>Mugs</li></a></Link>
         </ul>
       </div>
 
@@ -61,7 +61,7 @@ const Navbar = ({cart, addToCart, removeFromCart, clearCart, subtotal}) => {
           {Object.keys(cart).length == 0 && <div className='text-xl'>No items in the cart</div>}
           {Object.keys(cart).map((k)=>{ return <li key={k} className="my-2">
             <div className="flex">
-              <div className="w-2/3 text-xs md:text-base">{cart[k].name}</div>
+              <div className="w-2/3 text-xs md:text-base">{cart[k].name}({cart[k].size}/{cart[k].variant})</div>
               <div onClick={()=>{removeFromCart(k, 1, cart[k].price, cart[k].name, cart[k].size, cart[k].variant)}} className="w-10 flex items-center justify-center md:text-2xl text-xl cursor-pointer"><AiFillMinusCircle/></div>
               <div className="w-10 flex items-center justify-center bg-white">{cart[k].qty}</div>
               <div onClick={()=>{addToCart(k, 1, cart[k].price, cart[k].name, cart[k].size, cart[k].variant)}} className="w-10 flex items-center justify-center md:text-2xl text-xl cursor-pointer"><AiFillPlusCircle/></div>

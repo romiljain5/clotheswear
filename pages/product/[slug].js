@@ -49,7 +49,7 @@ const Post = ({addToCart, products, variants}) => {
                 CLOTHESWEAR
               </h2>
               <h1 className="text-gray-900 text-3xl title-font font-medium mb-1">
-                Orange Hoodie
+                {products.title} ({products.size}/{products.color})
               </h1>
               <div className="flex mb-4">
                 <span className="flex items-center">
@@ -150,12 +150,7 @@ const Post = ({addToCart, products, variants}) => {
                 </span>
               </div>
               <p className="leading-relaxed">
-                Fam locavore kickstarter distillery. Mixtape chillwave tumeric
-                sriracha taximy chia microdosing tilde DIY. XOXO fam indxgo
-                juiceramps cornhole raw denim forage brooklyn. Everyday carry +1
-                seitan poutine tumeric. Gastropub blue bottle austin listicle
-                pour-over, neutra jean shorts keytar banjo tattooed umami
-                cardigan.
+                {products.desc}
               </p>
               <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
                 <div className="flex">
@@ -201,7 +196,7 @@ const Post = ({addToCart, products, variants}) => {
                 <button className="flex ml-10 text-white bg-red-500 border-0 py-2 px-3 focus:outline-none hover:bg-red-600 rounded">
                   Buy Now
                 </button>
-                <button onClick={() => {addToCart(slug, 1, 699, "Hoodie T-shirt (M, Red)", "M", "Red")}} className="flex ml-3 text-white bg-red-500 border-0 py-2 px-3 focus:outline-none hover:bg-red-600 rounded">
+                <button onClick={() => {addToCart(slug, 1, 699, products.title, size, color)}} className="flex ml-3 text-white bg-red-500 border-0 py-2 px-3 focus:outline-none hover:bg-red-600 rounded">
                   Add to Cart
                 </button>
                 <button className="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
