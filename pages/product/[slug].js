@@ -3,7 +3,7 @@ import { useState } from "react";
 import Product from "../../models/Product";
 import mongoose from "mongoose";
 
-const Post = ({addToCart, products, variants}) => {
+const Post = ({buyNow, addToCart, products, variants}) => {
   console.log(variants, products)
   const router = useRouter();
   const { slug } = router.query;
@@ -157,6 +157,8 @@ const Post = ({addToCart, products, variants}) => {
                   <span className="mr-3">Color</span>
                   {/* you can add more colors same way if you have in database */}
                   {Object.keys(variants).includes('red') && Object.keys(variants['red']).includes(size) && <button onClick={() => {refreshVariant(size, 'red')}} className={`border-2 bg-red-700 rounded-full w-6 h-6 focus:outline-none ${color === 'red'? 'border-black': 'border-gray-300'}`}></button>}
+                  {Object.keys(variants).includes('white') && Object.keys(variants['white']).includes(size) && <button onClick={() => {refreshVariant(size, 'white')}} className={`border-2 bg-white rounded-full w-6 h-6 focus:outline-none ${color === 'white'? 'border-black': 'border-gray-300'}`}></button>}
+                  {Object.keys(variants).includes('blue') && Object.keys(variants['blue']).includes(size) && <button onClick={() => {refreshVariant(size, 'blue')}} className={`border-2 bg-blue-700 rounded-full w-6 h-6 focus:outline-none ${color === 'blue'? 'border-black': 'border-gray-300'}`}></button>}
                   {Object.keys(variants).includes('purple') && Object.keys(variants['purple']).includes(size) && <button onClick={() => {refreshVariant(size, 'purple')}} className={`border-2 ml-1 bg-purple-700 rounded-full w-6 h-6 focus:outline-none ${color === 'purple'? 'border-black': 'border-gray-300'}`}></button>}
                   {Object.keys(variants).includes('black') && Object.keys(variants['black']).includes(size) && <button onClick={() => {refreshVariant(size, 'black')}} className={`border-2 ml-1 bg-black rounded-full w-6 h-6 focus:outline-none ${color === 'black'? 'border-black': 'border-gray-300'}`}></button>}
                   {Object.keys(variants).includes('yellow') && Object.keys(variants['yellow']).includes(size) && <button onClick={() => {refreshVariant(size, 'yellow')}} className={`border-2 ml-1 bg-yellow-500 rounded-full w-6 h-6 focus:outline-none ${color === 'yellow'? 'border-black': 'border-gray-300'}`}></button>}
@@ -193,7 +195,7 @@ const Post = ({addToCart, products, variants}) => {
                 <span className="title-font font-medium text-2xl text-gray-900">
                   ₹{products.price}
                 </span>
-                <button className="flex ml-10 text-white bg-red-500 border-0 py-2 px-3 focus:outline-none hover:bg-red-600 rounded">
+                <button onClick={()=>{buyNow(slug, 1, products.price, products.title, size, color)}} className="flex ml-10 text-white bg-red-500 border-0 py-2 px-3 focus:outline-none hover:bg-red-600 rounded">
                   Buy Now
                 </button>
                 <button onClick={() => {addToCart(slug, 1, 699, products.title, size, color)}} className="flex ml-3 text-white bg-red-500 border-0 py-2 px-3 focus:outline-none hover:bg-red-600 rounded">

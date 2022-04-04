@@ -54,14 +54,14 @@ const Navbar = ({cart, addToCart, removeFromCart, clearCart, subtotal}) => {
 
       </div>
 
-      <div ref={ref} className="sidebar h-full z-10 shadow-xl  fixed top-0 right-0 bg-gray-300 py-10 md:w-2/6 px-8 w-3/5 transform transition-transform translate-x-full">
+      <div ref={ref} className={`sidebar h-full overflow-y-scroll z-10 shadow-xl  fixed top-0 right-0 bg-gray-300 py-10 md:w-80 pl-8 w-72 transform transition-transform ${Object.keys(cart).length !== 0 ? 'translate-x-0' : 'translate-x-full'}`}>
         <h2 className="text-xl font-bold">Shopping Cart</h2>
         <span onClick={toggleCart} className="absolute top-5 right-2 text-3xl cursor-pointer text-red-600"><AiFillCloseSquare/></span>
         <ol className="list-decimal mt-7">
           {Object.keys(cart).length == 0 && <div className='text-xl'>No items in the cart</div>}
-          {Object.keys(cart).map((k)=>{ return <li key={k} className="my-2">
+          {Object.keys(cart).map((k)=>{ return <li key={k} className="my-3 mb-4">
             <div className="flex">
-              <div className="w-2/3 text-xs md:text-base">{cart[k].name}({cart[k].size}/{cart[k].variant})</div>
+              <div className="w-2/3 text-base mr-2">{cart[k].name}({cart[k].size}/{cart[k].variant})</div>
               <div onClick={()=>{removeFromCart(k, 1, cart[k].price, cart[k].name, cart[k].size, cart[k].variant)}} className="w-10 flex items-center justify-center md:text-2xl text-xl cursor-pointer"><AiFillMinusCircle/></div>
               <div className="w-10 flex items-center justify-center bg-white">{cart[k].qty}</div>
               <div onClick={()=>{addToCart(k, 1, cart[k].price, cart[k].name, cart[k].size, cart[k].variant)}} className="w-10 flex items-center justify-center md:text-2xl text-xl cursor-pointer"><AiFillPlusCircle/></div>
@@ -69,6 +69,7 @@ const Navbar = ({cart, addToCart, removeFromCart, clearCart, subtotal}) => {
           </li>})}
 
         </ol>
+        <p className='text-lg font-semibold mt-5'>Rs {subtotal}</p>
 
         <div className="flex flex-col md:flex-row mt-10">
           <Link href={'/checkout'}>

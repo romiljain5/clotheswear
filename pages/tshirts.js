@@ -12,7 +12,7 @@ const Tshirts = ({products}) => {
           <div className="flex flex-wrap -m-4">
             {Object.keys(products).map((item) => {
             return <Link key={products[item]._id} href={`/product/${products[item].slug}`}>
-              <div className="lg:w-auto md:w-auto md:m-2 p-5 m-3 w-full cursor-pointer shadow-xl">
+              <div className="lg:w-1/4 md:w-1/3 md:m-0 p-4 m-2 w-full cursor-pointer shadow-xl">
                 <a className="flex justify-center relative rounded overflow-hidden">
                   <img
                     alt="ecommerce"

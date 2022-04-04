@@ -1,14 +1,4 @@
 [{
-    "title": "HRX by Hrithik Roshan",
-    "slug": "clothes-wear",
-    "desc": "Men Grey Solid Rapid Dry Training Tshirts",
-    "img": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/10565552/2020/5/19/aa5e81b6-507f-4679-9ccf-435303a5e6771589896360961-HRX-by-Hrithik-Roshan-Men-Grey-Solid-Rapid-Dry-Training-Tshi-1.jpg",
-    "category": "tshirt",
-    "size": "XL",
-    "color": "grey",
-    "price": 649,
-    "availableQty": 1
-},{
     "title": "Green Tshirt",
     "slug": "green-tshirt",
     "desc": "Women Green Printed Bio-Wash Yoga Tshirts",
@@ -17,8 +7,8 @@
     "size": "XL",
     "color": "green",
     "price": 349,
-    "availableQty": 1
-},{
+    "availableQty": 152
+  },{
     "title": "Basketball Men Black Rapid",
     "slug": "black-tshirt",
     "desc": "HRX By Hrithik Roshan Basketball Men Black Rapid-Dry Typography Tshirts",
@@ -27,8 +17,8 @@
     "size": "XL",
     "color": "black",
     "price": 749,
-    "availableQty": 1
-},{
+    "availableQty": 132
+  },{
     "title": "Yellow printed Tshirt",
     "slug": "yellow-tshirt",
     "desc": "Printed Tshirts",
@@ -37,5 +27,334 @@
     "size": "XL",
     "color": "yellow",
     "price": 1598,
-    "availableQty": 1
-}]
+    "availableQty": 120
+  },
+  
+  {
+    "title": "HRX by Hrithik Roshan",
+    "slug": "hrx-gray-m",
+    "desc": "Men Grey Solid Rapid Dry Training Tshirts",
+    "img": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/10565552/2020/5/19/aa5e81b6-507f-4679-9ccf-435303a5e6771589896360961-HRX-by-Hrithik-Roshan-Men-Grey-Solid-Rapid-Dry-Training-Tshi-1.jpg",
+    "category": "tshirt",
+    "size": "M",
+    "color": "gray",
+    "price": 649,
+    "availableQty": 120
+  },{
+    "title": "HRX by Hrithik Roshan",
+    "slug": "HRX-purple-m",
+    "desc": "Men Purple Solid Rapid Dry Training Tshirts",
+    "img": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/16318156/2022/1/29/0cbc7b8f-2730-4c58-84ac-076eaa7ad08c1643444567638-French-Connection-Men-Purple-Solid-Slim-Fit-T-shirt-53164344-1.jpg",
+    "category": "tshirt",
+    "size": "M",
+    "color": "purple",
+    "price": 649,
+    "availableQty": 98
+  },{
+    "title": "HRX by Hrithik Roshan",
+    "slug": "HRX-red-m",
+    "desc": "Men Red Solid Rapid Dry Training Tshirts",
+    "img": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/16318116/2022/1/29/389e383a-0433-4890-b477-81e31ba6671d1643444544363-French-Connection-Men-Red-Solid-Slim-Fit-T-shirt-59164344454-1.jpg",
+    "category": "tshirt",
+    "size": "M",
+    "color": "red",
+    "price": 649,
+    "availableQty": 120
+  },{
+    "title": "HRX by Hrithik Roshan",
+    "slug": "hrx-gray-l",
+    "desc": "Men Grey Solid Rapid Dry Training Tshirts",
+    "img": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/10565552/2020/5/19/aa5e81b6-507f-4679-9ccf-435303a5e6771589896360961-HRX-by-Hrithik-Roshan-Men-Grey-Solid-Rapid-Dry-Training-Tshi-1.jpg",
+    "category": "tshirt",
+    "size": "L",
+    "color": "gray",
+    "price": 649,
+    "availableQty": 120
+  },{
+    "title": "HRX by Hrithik Roshan",
+    "slug": "hrx-red-l",
+    "desc": "Men red Solid Rapid Dry Training Tshirts",
+    "img": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/16318116/2022/1/29/389e383a-0433-4890-b477-81e31ba6671d1643444544363-French-Connection-Men-Red-Solid-Slim-Fit-T-shirt-59164344454-1.jpg",
+    "category": "tshirt",
+    "size": "L",
+    "color": "red",
+    "price": 649,
+    "availableQty": 120
+  },{
+    "title": "HRX by Hrithik Roshan",
+    "slug": "hrx-purple-l",
+    "desc": "Men Purple Solid Rapid Dry Training Tshirts",
+    "img": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/16318156/2022/1/29/0cbc7b8f-2730-4c58-84ac-076eaa7ad08c1643444567638-French-Connection-Men-Purple-Solid-Slim-Fit-T-shirt-53164344-1.jpg",
+    "category": "tshirt",
+    "size": "L",
+    "color": "purple",
+    "price": 649,
+    "availableQty": 120
+  },{
+    "title": "HRX by Hrithik Roshan",
+    "slug": "hrx-m-green",
+    "desc": "Men Green Solid Rapid Dry Training Tshirts",
+    "img": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/17591596/2022/3/21/96234027-2662-4498-be7c-a3d889b048e11647843026261InvincibleMenGreenDri-FITAppliqueSlimFitTrainingorGymT-shirt1.jpg",
+    "category": "tshirt",
+    "size": "M",
+    "color": "green",
+    "price": 699,
+    "availableQty": 120
+  },{
+    "title": "HRX by Hrithik Roshan",
+    "slug": "hrx-yellow-m",
+    "desc": "Men yellow Solid Rapid Dry Training Tshirts",
+    "img": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/15340950/2022/2/2/af93518d-2675-4384-9f05-e1de20541eca1643795349431-Pure-Cotton-4551643795348946-1.jpg",
+    "category": "tshirt",
+    "size": "M",
+    "color": "yellow",
+    "price": 649,
+    "availableQty": 120
+  },
+  
+  
+  {
+    "title": "Allen Solly",
+    "slug": "allen-solly-s",
+    "desc": "Men White Printed Hooded Sweatshirt",
+    "img": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/15913736/2021/11/16/312bfe67-04be-4c0d-b816-85576dab1cff1637065544139-Allen-Solly-Men-Sweatshirts-4201637065543546-1.jpg",
+    "category": "hoodies",
+    "size": "S",
+    "color": "white",
+    "price": 1150,
+    "availableQty": 80
+  },{
+    "title": "Allen Solly",
+    "slug": "allen-solly-l",
+    "desc": "Men White Printed Hooded Sweatshirt",
+    "img": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/15913736/2021/11/16/312bfe67-04be-4c0d-b816-85576dab1cff1637065544139-Allen-Solly-Men-Sweatshirts-4201637065543546-1.jpg",
+    "category": "hoodies",
+    "size": "L",
+    "color": "white",
+    "price": 1150,
+    "availableQty": 80
+  },{
+    "title": "Allen Solly",
+    "slug": "allen-solly-xl",
+    "desc": "Men White Printed Hooded Sweatshirt",
+    "img": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/15913736/2021/11/16/312bfe67-04be-4c0d-b816-85576dab1cff1637065544139-Allen-Solly-Men-Sweatshirts-4201637065543546-1.jpg",
+    "category": "hoodies",
+    "size": "XL",
+    "color": "white",
+    "price": 1150,
+    "availableQty": 80
+  },{
+    "title": "HIGHLANDER",
+    "slug": "highlander-s",
+    "desc": "Men Grey Solid Hooded Sweatshirt",
+    "img": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/productimage/2020/11/28/d93a4d27-5bad-4514-a752-80199fa4f0051606566407888-1.jpg",
+    "category": "hoodies",
+    "size": "S",
+    "color": "gray",
+    "price": 629,
+    "availableQty": 125
+  },{
+    "title": "HIGHLANDER",
+    "slug": "highlander-m",
+    "desc": "Men Grey Solid Hooded Sweatshirt",
+    "img": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/productimage/2020/11/28/d93a4d27-5bad-4514-a752-80199fa4f0051606566407888-1.jpg",
+    "category": "hoodies",
+    "size": "M",
+    "color": "gray",
+    "price": 629,
+    "availableQty": 125
+  },{
+    "title": "HIGHLANDER",
+    "slug": "highlander-l",
+    "desc": "Men Grey Solid Hooded Sweatshirt",
+    "img": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/productimage/2020/11/28/d93a4d27-5bad-4514-a752-80199fa4f0051606566407888-1.jpg",
+    "category": "hoodies",
+    "size": "L",
+    "color": "gray",
+    "price": 629,
+    "availableQty": 125
+  },{
+    "title": "HIGHLANDER",
+    "slug": "highlander-blue-s",
+    "desc": "Men Grey Solid Hooded Sweatshirt",
+    "img": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/productimage/2020/11/21/c756a669-ec67-4d43-8fe2-73836a4eb2fc1605939672648-1.jpg",
+    "category": "hoodies",
+    "size": "S",
+    "color": "blue",
+    "price": 649,
+    "availableQty": 125
+  },{
+    "title": "HIGHLANDER",
+    "slug": "highlander-blue-m",
+    "desc": "Men Grey Solid Hooded Sweatshirt",
+    "img": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/productimage/2020/11/21/c756a669-ec67-4d43-8fe2-73836a4eb2fc1605939672648-1.jpg",
+    "category": "hoodies",
+    "size": "M",
+    "color": "blue",
+    "price": 649,
+    "availableQty": 125
+  },
+  {
+    "title": "Hubberholme",
+    "slug": "hubberholme-black-s",
+    "desc": "Men Black Printed Hooded Sweatshirt",
+    "img": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/15720190/2021/10/19/ad5e9047-bdd7-4c4d-9822-d14d75196a0c1634625408755SWAGGINDIAWomensWearviscosejacquardfabrickurtawithpantsetMar1.jpg",
+    "category": "hoodies",
+    "size": "S",
+    "color": "black",
+    "price": 649,
+    "availableQty": 125
+  },{
+    "title": "Hubberholme",
+    "slug": "hubberholme-black-m",
+    "desc": "Men Black Printed Hooded Sweatshirt",
+    "img": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/15720190/2021/10/19/ad5e9047-bdd7-4c4d-9822-d14d75196a0c1634625408755SWAGGINDIAWomensWearviscosejacquardfabrickurtawithpantsetMar1.jpg",
+    "category": "hoodies",
+    "size": "M",
+    "color": "black",
+    "price": 649,
+    "availableQty": 125
+  },{
+    "title": "Hubberholme",
+    "slug": "hubberholme-black-xl",
+    "desc": "Men Black Printed Hooded Sweatshirt",
+    "img": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/15720190/2021/10/19/ad5e9047-bdd7-4c4d-9822-d14d75196a0c1634625408755SWAGGINDIAWomensWearviscosejacquardfabrickurtawithpantsetMar1.jpg",
+    "category": "hoodies",
+    "size": "XL",
+    "color": "black",
+    "price": 649,
+    "availableQty": 125
+  },{
+    "title": "Hubberholme",
+    "slug": "hubberholme-gray-s",
+    "desc": "Men Black Printed Hooded Sweatshirt",
+    "img": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/15720180/2021/10/19/4d39f23a-a814-4d22-bd7a-bd9df0947b4e1634625437193SWAGGINDIAWomensWearviscosejacquardfabrickurtawithpantsetMar1.jpg",
+    "category": "hoodies",
+    "size": "S",
+    "color": "gray",
+    "price": 649,
+    "availableQty": 125
+  },{
+    "title": "Hubberholme",
+    "slug": "hubberholme-gray-m",
+    "desc": "Men Black Printed Hooded Sweatshirt",
+    "img": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/15720180/2021/10/19/4d39f23a-a814-4d22-bd7a-bd9df0947b4e1634625437193SWAGGINDIAWomensWearviscosejacquardfabrickurtawithpantsetMar1.jpg",
+    "category": "hoodies",
+    "size": "M",
+    "color": "gray",
+    "price": 649,
+    "availableQty": 100
+  },{
+    "title": "GANT",
+    "slug": "gant-red-m",
+    "desc": "Men Maroon Printed Hooded Sweatshirt",
+    "img": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/15144304/2021/8/13/defcdc57-3c80-45e9-92c2-db9f8095b21d1628866321029Sweatshirts1.jpg",
+    "category": "hoodies",
+    "size": "M",
+    "color": "red",
+    "price": 7349,
+    "availableQty": 100
+  },{
+    "title": "GANT",
+    "slug": "gant-red-s",
+    "desc": "Men Maroon Printed Hooded Sweatshirt",
+    "img": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/15144304/2021/8/13/defcdc57-3c80-45e9-92c2-db9f8095b21d1628866321029Sweatshirts1.jpg",
+    "category": "hoodies",
+    "size": "S",
+    "color": "red",
+    "price": 7349,
+    "availableQty": 120
+  },{
+    "title": "GANT",
+    "slug": "gant-red-l",
+    "desc": "Men Maroon Printed Hooded Sweatshirt",
+    "img": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/15144304/2021/8/13/defcdc57-3c80-45e9-92c2-db9f8095b21d1628866321029Sweatshirts1.jpg",
+    "category": "hoodies",
+    "size": "L",
+    "color": "red",
+    "price": 7349,
+    "availableQty": 100
+  },
+  
+  {
+    "title": "ADIDAS",
+    "slug": "adidas-green-l",
+    "desc": "Men Green & Black Q4 Fleece Hooded Sweatshirt",
+    "img": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/14746254/2021/11/10/4fdd54c8-956e-40b3-a6e4-e3904ff5f2a91636535236204-ADIDAS-Men-Sweatshirts-9071636535235764-1.jpg",
+    "category": "hoodies",
+    "size": "L",
+    "color": "green",
+    "price": 2759,
+    "availableQty": 120
+  },{
+    "title": "ADIDAS",
+    "slug": "adidas-green-m",
+    "desc": "Men Green & Black Q4 Fleece Hooded Sweatshirt",
+    "img": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/14746254/2021/11/10/4fdd54c8-956e-40b3-a6e4-e3904ff5f2a91636535236204-ADIDAS-Men-Sweatshirts-9071636535235764-1.jpg",
+    "category": "hoodies",
+    "size": "M",
+    "color": "green",
+    "price": 2759,
+    "availableQty": 120
+  },{
+    "title": "ADIDAS",
+    "slug": "adidas-green-xxl",
+    "desc": "Men Green & Black Q4 Fleece Hooded Sweatshirt",
+    "img": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/14746254/2021/11/10/4fdd54c8-956e-40b3-a6e4-e3904ff5f2a91636535236204-ADIDAS-Men-Sweatshirts-9071636535235764-1.jpg",
+    "category": "hoodies",
+    "size": "XXL",
+    "color": "green",
+    "price": 2759,
+    "availableQty": 120
+  },{
+    "title": "ADIDAS",
+    "slug": "adidas-green-xl",
+    "desc": "Men Green & Black Q4 Fleece Hooded Sweatshirt",
+    "img": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/14746254/2021/11/10/4fdd54c8-956e-40b3-a6e4-e3904ff5f2a91636535236204-ADIDAS-Men-Sweatshirts-9071636535235764-1.jpg",
+    "category": "hoodies",
+    "size": "XL",
+    "color": "green",
+    "price": 2759,
+    "availableQty": 120
+  },{
+    "title": "Jack & Jones",
+    "slug": "jack-white-s",
+    "desc": "Men Multicoloured Printed Hooded Sweatshir",
+    "img": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/17176850/2022/2/16/62ac7da6-ec0c-4dc6-8934-ff36472697b91645023889073JackJonesMenMulticolouredPrintedHoodedSweatshirt1.jpg",
+    "category": "hoodies",
+    "size": "S",
+    "color": "white",
+    "price": 1599,
+    "availableQty": 120
+  },{
+    "title": "Jack & Jones",
+    "slug": "jack-white-m",
+    "desc": "Men Multicoloured Printed Hooded Sweatshir",
+    "img": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/17176850/2022/2/16/62ac7da6-ec0c-4dc6-8934-ff36472697b91645023889073JackJonesMenMulticolouredPrintedHoodedSweatshirt1.jpg",
+    "category": "hoodies",
+    "size": "M",
+    "color": "white",
+    "price": 1599,
+    "availableQty": 120
+  },{
+    "title": "Jack & Jones",
+    "slug": "jack-white-xl",
+    "desc": "Men Multicoloured Printed Hooded Sweatshir",
+    "img": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/17176850/2022/2/16/62ac7da6-ec0c-4dc6-8934-ff36472697b91645023889073JackJonesMenMulticolouredPrintedHoodedSweatshirt1.jpg",
+    "category": "hoodies",
+    "size": "XL",
+    "color": "white",
+    "price": 1599,
+    "availableQty": 120
+  },{
+    "title": "Jack & Jones",
+    "slug": "jack-white-xxl",
+    "desc": "Men Multicoloured Printed Hooded Sweatshir",
+    "img": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/17176850/2022/2/16/62ac7da6-ec0c-4dc6-8934-ff36472697b91645023889073JackJonesMenMulticolouredPrintedHoodedSweatshirt1.jpg",
+    "category": "hoodies",
+    "size": "XXL",
+    "color": "white",
+    "price": 1599,
+    "availableQty": 120
+  }
+]
