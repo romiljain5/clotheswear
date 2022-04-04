@@ -1,7 +1,10 @@
 import { useRouter } from "next/router";
 import { useState } from "react";
+import Product from "../../models/Product";
+import mongoose from "mongoose";
 
-const Post = ({addToCart}) => {
+const Post = ({addToCart, products, variants}) => {
+  console.log(variants, products)
   const router = useRouter();
   const { slug } = router.query;
   const [pin, setPin] = useState();
@@ -22,6 +25,15 @@ const Post = ({addToCart}) => {
     setPin(e.target.value);
   };
 
+  const [color, setColor] = useState(products.color)
+  const [size, setSize] = useState(products.size)
+
+  const refreshVariant = (newcolor, newsize) => {
+    let url = `http://localhost:3000/product/${variants[newsize][newcolor]['slug']}`
+    // will reload page
+    window.location = url
+  }
+
   return (
     <>
       <section className="text-gray-600 body-font overflow-hidden">
@@ -30,7 +42,7 @@ const Post = ({addToCart}) => {
             <img
               alt="ecommerce"
               className="lg:w-1/2 w-full lg:h-auto h-full md:px-0 px-20 object-cover object-top rounded"
-              src="https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/15144304/2021/8/13/defcdc57-3c80-45e9-92c2-db9f8095b21d1628866321029Sweatshirts1.jpg"
+              src={products.img}
             />
             <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
               <h2 className="text-sm title-font text-gray-500 tracking-widest">
@@ -46,7 +58,7 @@ const Post = ({addToCart}) => {
                     stroke="currentColor"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeWidth="2"
                     className="w-4 h-4 text-red-500"
                     viewBox="0 0 24 24"
                   >
@@ -57,7 +69,7 @@ const Post = ({addToCart}) => {
                     stroke="currentColor"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeWidth="2"
                     className="w-4 h-4 text-red-500"
                     viewBox="0 0 24 24"
                   >
@@ -68,7 +80,7 @@ const Post = ({addToCart}) => {
                     stroke="currentColor"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeWidth="2"
                     className="w-4 h-4 text-red-500"
                     viewBox="0 0 24 24"
                   >
@@ -79,7 +91,7 @@ const Post = ({addToCart}) => {
                     stroke="currentColor"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeWidth="2"
                     className="w-4 h-4 text-red-500"
                     viewBox="0 0 24 24"
                   >
@@ -90,7 +102,7 @@ const Post = ({addToCart}) => {
                     stroke="currentColor"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeWidth="2"
                     className="w-4 h-4 text-red-500"
                     viewBox="0 0 24 24"
                   >
@@ -104,7 +116,7 @@ const Post = ({addToCart}) => {
                       fill="currentColor"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeWidth="2"
                       className="w-5 h-5"
                       viewBox="0 0 24 24"
                     >
@@ -116,7 +128,7 @@ const Post = ({addToCart}) => {
                       fill="currentColor"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeWidth="2"
                       className="w-5 h-5"
                       viewBox="0 0 24 24"
                     >
@@ -128,7 +140,7 @@ const Post = ({addToCart}) => {
                       fill="currentColor"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeWidth="2"
                       className="w-5 h-5"
                       viewBox="0 0 24 24"
                     >
@@ -148,18 +160,23 @@ const Post = ({addToCart}) => {
               <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
                 <div className="flex">
                   <span className="mr-3">Color</span>
-                  <button className="border-2 border-gray-300 rounded-full w-6 h-6 focus:outline-none"></button>
-                  <button className="border-2 border-gray-300 ml-1 bg-gray-700 rounded-full w-6 h-6 focus:outline-none"></button>
-                  <button className="border-2 border-gray-300 ml-1 bg-red-500 rounded-full w-6 h-6 focus:outline-none"></button>
+                  {/* you can add more colors same way if you have in database */}
+                  {Object.keys(variants).includes('red') && Object.keys(variants['red']).includes(size) && <button onClick={() => {refreshVariant(size, 'red')}} className={`border-2 bg-red-700 rounded-full w-6 h-6 focus:outline-none ${color === 'red'? 'border-black': 'border-gray-300'}`}></button>}
+                  {Object.keys(variants).includes('purple') && Object.keys(variants['purple']).includes(size) && <button onClick={() => {refreshVariant(size, 'purple')}} className={`border-2 ml-1 bg-purple-700 rounded-full w-6 h-6 focus:outline-none ${color === 'purple'? 'border-black': 'border-gray-300'}`}></button>}
+                  {Object.keys(variants).includes('black') && Object.keys(variants['black']).includes(size) && <button onClick={() => {refreshVariant(size, 'black')}} className={`border-2 ml-1 bg-black rounded-full w-6 h-6 focus:outline-none ${color === 'black'? 'border-black': 'border-gray-300'}`}></button>}
+                  {Object.keys(variants).includes('yellow') && Object.keys(variants['yellow']).includes(size) && <button onClick={() => {refreshVariant(size, 'yellow')}} className={`border-2 ml-1 bg-yellow-500 rounded-full w-6 h-6 focus:outline-none ${color === 'yellow'? 'border-black': 'border-gray-300'}`}></button>}
+                  {Object.keys(variants).includes('green') && Object.keys(variants['green']).includes(size) && <button onClick={() => {refreshVariant(size, 'green')}} className={`border-2 ml-1 bg-green-500 rounded-full w-6 h-6 focus:outline-none ${color === 'green'? 'border-black': 'border-gray-300'}`}></button>}
+                  {Object.keys(variants).includes('gray') && Object.keys(variants['gray']).includes(size) && <button onClick={() => {refreshVariant(size, 'gray')}} className={`border-2 ml-1 bg-gray-500 rounded-full w-6 h-6 focus:outline-none ${color === 'gray'? 'border-black': 'border-gray-300'}`}></button>}
                 </div>
                 <div className="flex ml-6 items-center">
                   <span className="mr-3">Size</span>
                   <div className="relative">
-                    <select className="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-red-200 focus:border-red-500 text-base pl-3 pr-10">
-                      <option>SM</option>
-                      <option>M</option>
-                      <option>L</option>
-                      <option>XL</option>
+                    <select value={size} onChange={(e) => refreshVariant(e.target.value, color)} className="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-red-200 focus:border-red-500 text-base pl-3 pr-10">
+                      {Object.keys(variants[color]).includes('S') && <option value={'S'}>S</option>}
+                      {Object.keys(variants[color]).includes('M') && <option value={'M'}>M</option>}
+                      {Object.keys(variants[color]).includes('L') && <option value={'L'}>L</option>}
+                      {Object.keys(variants[color]).includes('XL') && <option value={'XL'}>XL</option>}
+                      {Object.keys(variants[color]).includes('XXL') && <option value={'XXL'}>XXL</option>}
                     </select>
                     <span className="absolute right-0 top-0 h-full w-10 text-center text-gray-600 pointer-events-none flex items-center justify-center">
                       <svg
@@ -167,7 +184,7 @@ const Post = ({addToCart}) => {
                         stroke="currentColor"
                         stroke-linecap="round"
                         stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeWidth="2"
                         className="w-4 h-4"
                         viewBox="0 0 24 24"
                       >
@@ -179,7 +196,7 @@ const Post = ({addToCart}) => {
               </div>
               <div className="flex">
                 <span className="title-font font-medium text-2xl text-gray-900">
-                  ₹699
+                  ₹{products.price}
                 </span>
                 <button className="flex ml-10 text-white bg-red-500 border-0 py-2 px-3 focus:outline-none hover:bg-red-600 rounded">
                   Buy Now
@@ -192,7 +209,7 @@ const Post = ({addToCart}) => {
                     fill="currentColor"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeWidth="2"
                     className="w-5 h-5"
                     viewBox="0 0 24 24"
                   >
@@ -236,5 +253,30 @@ const Post = ({addToCart}) => {
     </>
   );
 };
+
+//this function will help to compare and open slug, Product clicked will be opened
+//Using this function we are passing server side data in form of props to tshirts.js
+export async function getServerSideProps(context) {
+  if (mongoose.connections[0].readyState) {
+    // MONGO_URI is in .env.local where database link is stored
+    await mongoose.connect(process.env.MONGO_URI);
+  }
+    
+    // In mongo find() method returns all databases which contains category as tshirt
+    let products = await Product.findOne({slug: context.query.slug});
+    let variants = await Product.find({title: products.title})
+    let colorSizeSlug = {} // {red: {xl: {slug: 'clotheswear-xl'}}}
+    for(let item of variants){
+      if(Object.keys(colorSizeSlug).includes(item.color)){
+        colorSizeSlug[item.color][item.size] = {slug: item.slug}
+      }else{
+        colorSizeSlug[item.color] = {}
+        colorSizeSlug[item.color][item.size] = {slug: item.slug}
+      }
+    }
+  return {
+    props: {products: JSON.parse(JSON.stringify(products)), variants: JSON.parse(JSON.stringify(colorSizeSlug))}, // will be passed to the page component as props
+  };
+}
 
 export default Post;

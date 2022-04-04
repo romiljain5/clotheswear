@@ -7,7 +7,7 @@ import {FiTrash2} from 'react-icons/fi'
 import {MdAccountCircle} from 'react-icons/md'
 
 const Navbar = ({cart, addToCart, removeFromCart, clearCart, subtotal}) => {
-  console.log(cart, addToCart, removeFromCart, clearCart, subtotal)
+  // console.log(cart, addToCart, removeFromCart, clearCart, subtotal)
   // This function is used to toggle cart
   const toggleCart =()=>{
     if(ref.current.classList.contains('translate-x-full')){
