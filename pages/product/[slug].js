@@ -2,6 +2,9 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import Product from "../../models/Product";
 import mongoose from "mongoose";
+// by react toastify
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Post = ({buyNow, addToCart, products, variants}) => {
   console.log(variants, products)
@@ -9,15 +12,33 @@ const Post = ({buyNow, addToCart, products, variants}) => {
   const { slug } = router.query;
   const [pin, setPin] = useState();
   const [avail, setAvail] = useState();
-
+  
   // checks pincode availability through pincode.js api in api folder
   const checkAvailability = async () => {
     const api = await fetch("http://localhost:3000/api/pincode");
     const pins = await api.json();
     if (pins.includes(parseInt(pin))) {
       setAvail(true);
+      toast.success('Your pincode is serviceable', {
+        position: "bottom-center",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        });
     } else {
       setAvail(false);
+      toast.error('Sorry, Your pincode is not serviceable', {
+        position: "bottom-center",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        });
     }
   };
 
@@ -37,6 +58,17 @@ const Post = ({buyNow, addToCart, products, variants}) => {
   return (
     <>
       <section className="text-gray-600 body-font overflow-hidden">
+      <ToastContainer
+        position="bottom-center"
+        autoClose={1000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
         <div className="container px-5 py-14 mx-auto">
           <div className="lg:w-4/5 mx-auto flex flex-wrap">
             <img
