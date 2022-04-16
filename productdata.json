@@ -356,5 +356,30 @@
     "color": "white",
     "price": 1599,
     "availableQty": 120
+  },
+  
+  
+  {
+    "title": "Orange Hacker Sticker",
+    "slug": "orange-hacker",
+    "desc": "'Hackers are actually good, pleasant and extremely intelligent people who could keep computer criminals on the run' – Ankit Fadia",
+    "img": "https://juststickers.in/wp-content/uploads/2021/09/orange-hacker-thumbnail-326x326.png",
+    "category": "stickers",
+    "size": "M",
+    "color": "orange",
+    "price": 149,
+    "availableQty": 120
+  },
+  
+  {
+    "title": "Disney Mickey Mouse Brings Trouble",
+    "slug": "disney-mickey-mug",
+    "desc": "This mug made with premium quality ceramic material with your favourite designs on it",
+    "img": "https://i1.fnp.com/images/pr/l/v20210817131258/disney-mickey-mouse-mug-hand-delivery_1.jpg",
+    "category": "mugs",
+    "size": "M",
+    "color": "red",
+    "price": 249,
+    "availableQty": 120
   }
 ]
