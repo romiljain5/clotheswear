@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 
+// mongoose library is to connnect react/nextjs with mongodb
 const UserSchema = new mongoose.Schema({
     name: {type: String, required: true},
     email: {type: String, required: true, unique:true},

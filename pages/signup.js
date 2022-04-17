@@ -1,8 +1,67 @@
 import React from 'react'
 import Link from 'next/link'
+import { useState } from 'react'
+import {toast, ToastContainer} from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 const Signup = () => {
+  const [name, setName] = useState()
+  const [email, setEmail] = useState()
+  const [password, setPassword] = useState()
+
+  const handleChange = (e) => {
+    if(e.target.name == 'name'){
+      setName(e.target.value)
+    }
+    else if(e.target.name == 'email'){
+      setEmail(e.target.value)
+    }
+    else if(e.target.name == 'password'){
+      setPassword(e.target.value)
+    }
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    const data = {name, email, password}
+
+    let res = await fetch("http://localhost:3000/api/signup", {
+      method:"POST",
+      headers: {
+        'Content-Type':'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify(data),
+    })
+    let response = await res.json()
+    console.log(response)
+    setName('')
+    setEmail('')
+    setPassword('')
+    toast.success('Your account has been created!', {
+      position: "bottom-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      });
+  }
+
   return (
+    <div>
+      <ToastContainer
+        position="bottom-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     <div className="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8">
         <div>
@@ -24,14 +83,16 @@ const Signup = () => {
             </Link>
           </p>
         </div>
-        <form className="mt-8 space-y-6" action="#" method="POST">
+        <form onSubmit={handleSubmit} className="mt-8 space-y-6" method="POST">
           <input type="hidden" name="remember" value="true" />
           <div className="rounded-md shadow-sm -space-y-px">
             <div>
-              <label for="name" className="sr-only">
+              <label htmlFor='name' for="name" className="sr-only">
                 Full Name
               </label>
               <input
+                onChange={handleChange}
+                value={name}
                 id="name"
                 name="name"
                 type="text"
@@ -42,11 +103,13 @@ const Signup = () => {
               />
             </div>
             <div>
-              <label for="email-address" className="sr-only">
+              <label htmlFor='email' for="email" className="sr-only">
                 Email address
               </label>
               <input
-                id="email-address"
+                onChange={handleChange}
+                value={email}
+                id="email"
                 name="email"
                 type="email"
                 autocomplete="email"
@@ -56,10 +119,12 @@ const Signup = () => {
               />
             </div>
             <div>
-              <label for="password" className="sr-only">
+              <label htmlFor='password' for="password" className="sr-only">
                 Password
               </label>
               <input
+                onChange={handleChange}
+                value={password}
                 id="password"
                 name="password"
                 type="password"
@@ -97,6 +162,7 @@ const Signup = () => {
           </div>
         </form>
       </div>
+    </div>
     </div>
   )
 }
