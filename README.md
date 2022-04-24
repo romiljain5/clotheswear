@@ -16,6 +16,7 @@ yarn dev
     -Which is used to store database in mongoDB
 
 - use productdata.json file to add product data in MongoDB compass
+- Used crypto js npm library for encrypting password -> (<a href="https://www.npmjs.com/package/crypto-js">Crypto-js Documentation</a>)
 
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
