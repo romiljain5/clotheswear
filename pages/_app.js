@@ -8,6 +8,8 @@ function MyApp({ Component, pageProps }) {
   const [cart, setCart] = useState({})
   const [subtotal, setSubtotal] = useState(0)
   const router = useRouter()
+  const [user, setuser] = useState({value:null})
+  const [key, setkey] = useState(0)
 
   useEffect(()=>{
     console.log("run from _app.js")
@@ -21,7 +23,19 @@ function MyApp({ Component, pageProps }) {
       console.log(error)
       localStorage.clear()
     }
-  }, [])
+    // getting token that is saved in localstorage via JWT json web tokens
+    const token = localStorage.getItem('token')
+    if(token){
+      setuser({value: token})
+      setkey(Math.random())
+    }
+  }, [router.query])
+
+  const logout = () => {
+    localStorage.removeItem('token')
+    setuser({value:null})
+    setkey(Math.random())
+  }
 
   // to save in local storage
   const saveCart = (myCart) => {
@@ -81,7 +95,7 @@ function MyApp({ Component, pageProps }) {
     saveCart({})
   }
   return (<>
-    <Navbar cart={cart} addToCart={addToCart} removeFromCart={removeFromCart} clearCart={clearCart} subtotal={subtotal}/>
+    <Navbar logout={logout} user={user} key={key} cart={cart} addToCart={addToCart} removeFromCart={removeFromCart} clearCart={clearCart} subtotal={subtotal}/>
     {/* below component props gets pases to all */}
     <Component buyNow={buyNow} cart={cart} addToCart={addToCart} removeFromCart={removeFromCart} clearCart={clearCart} subtotal={subtotal} {...pageProps} /> 
     <Footer/>

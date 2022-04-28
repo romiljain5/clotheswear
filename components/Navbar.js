@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import Link from 'next/link'
 import {BsCart2} from 'react-icons/bs'
 import {AiFillCloseSquare, AiFillPlusCircle, AiFillMinusCircle} from 'react-icons/ai'
@@ -6,7 +6,9 @@ import {BsBagCheck} from 'react-icons/bs'
 import {FiTrash2} from 'react-icons/fi'
 import {MdAccountCircle} from 'react-icons/md'
 
-const Navbar = ({cart, addToCart, removeFromCart, clearCart, subtotal}) => {
+const Navbar = ({logout, user, cart, addToCart, removeFromCart, clearCart, subtotal}) => {
+  const [dropdown, setDropdown] = useState(false)
+
   // console.log(cart, addToCart, removeFromCart, clearCart, subtotal)
   // This function is used to toggle cart
   const toggleCart =()=>{
@@ -18,6 +20,7 @@ const Navbar = ({cart, addToCart, removeFromCart, clearCart, subtotal}) => {
       ref.current.classList.add('translate-x-full')
     }
   }
+
 
   const ref = useRef()
   return (
@@ -43,15 +46,31 @@ const Navbar = ({cart, addToCart, removeFromCart, clearCart, subtotal}) => {
 
       <div className='flex w-auto md:ml-auto absolute md:relative right-2'>
         <div className='cart text-4xl mr-2 md:mr-0 cursor-pointer w-1/2 justify-center md:justify-end md:w-auto flex md:ml-auto my-auto'>
-          <Link href={'/login'}>
-            <MdAccountCircle/>
-          </Link>
+       
+       <a onMouseOver={() => {setDropdown(true)}} onMouseLeave={() => {setDropdown(false)}}>
+        {/* if user.value is not null only then render <MdAccountCircle> */}
+        {user.value && <MdAccountCircle/>}
+        
+      {dropdown && <div onMouseOver={() => {setDropdown(true)}} onMouseLeave={() => {setDropdown(false)}} className='absolute right-7 bg-red-600 text-white text-base top-13 rounded-md w-36'>
+        
+        <ul>
+          <Link href={'/myaccount'}><a><li className='py-2 rounded-t-md border-b-2 border-red-500 px-3 hover:bg-red-700'>My Account</li> </a></Link>
+          <Link href={'/orders'}><a><li className='py-2 border-b-2 border-red-500 px-3 hover:bg-red-700'>Orders</li></a></Link>
+          <li onClick={logout} className='py-2 rounded-b-md border-b-2 border-red-500 px-3 hover:bg-red-700'>Logout</li>
+        </ul>
+      </div>}
+      </a>
+
+        {!user.value && <Link href={'/login'}>
+          <button class="text-white md:text-base text-sm bg-red-600 border-0 py-2 px-6 focus:outline-none hover:bg-red-800 rounded-md">
+            Login
+          </button>
+        </Link>}
         </div>
         <div onClick={toggleCart} className='cart cursor-pointer w-1/2 justify-center md:justify-end md:w-auto flex md:ml-5 my-auto justify-center flex-wrap'>
             <a><BsCart2 className='text-3xl'/></a>
         </div>
       </div>
-
       </div>
 
       <div ref={ref} className={`sidebar h-full overflow-y-scroll z-10 shadow-xl  fixed top-0 right-0 bg-gray-300 py-10 md:w-80 pl-8 w-72 transform transition-transform ${Object.keys(cart).length !== 0 ? 'translate-x-0' : 'translate-x-full'}`}>
@@ -73,12 +92,12 @@ const Navbar = ({cart, addToCart, removeFromCart, clearCart, subtotal}) => {
 
         <div className="flex flex-col md:flex-row mt-10">
           <Link href={'/checkout'}>
-          <button className="flex mr-3 text-white w-full md:w-auto bg-green-600 border-0 py-2 px-5 focus:outline-none hover:bg-green-700 rounded md:text-md text-sm">
+          <button className="flex mr-3 text-white md:w-auto w-4/5 bg-green-600 border-0 py-2 px-5 focus:outline-none hover:bg-green-700 rounded md:text-md text-sm">
             <BsBagCheck className="my-1 mr-2"/> Checkout
           </button>
           </Link>
 
-          <button onClick={clearCart} className="flex md:mt-0 mt-5 w-full md:w-auto text-white bg-red-600 border-0 py-2 px-5 focus:outline-none hover:bg-orange-800 rounded md:text-md text-sm">
+          <button onClick={clearCart} className="flex md:mt-0 mt-5 w-4/5 md:w-auto text-white bg-red-600 border-0 py-2 px-5 focus:outline-none hover:bg-orange-800 rounded md:text-md text-sm">
             <FiTrash2 className="my-1 mr-2"/> Empty Cart
           </button>
         </div>
