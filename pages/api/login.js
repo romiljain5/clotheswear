@@ -1,6 +1,8 @@
 import User from "../../models/User";
 import connectDB from "../../middleware/mongoose";
 var CryptoJS = require("crypto-js");
+// JWT Json Web Token
+var jwt = require('jsonwebtoken');
 
 // for adding user via post request which we can generate with thunder client post request to
 // http://localhost:3000/api/signup this url
@@ -13,7 +15,8 @@ const handler = async (req, res) => {
     var decryptedPass = bytes.toString(CryptoJS.enc.Utf8);
     if(user){
         if(req.body.email == user.email && req.body.password == decryptedPass){
-            res.status(200).json({ success: true, email: user.email, name: user.name });
+            var token = jwt.sign({ email: user.email, name: user.name }, 'jwtsecret', { expiresIn: '1d' });
+            res.status(200).json({ success: true, token });
         }else{
             res.status(200).json({ success: false, error: "Invalid Credentials" });
         }

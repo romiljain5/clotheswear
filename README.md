@@ -17,6 +17,7 @@ yarn dev
 
 - use productdata.json file to add product data in MongoDB compass
 - Used crypto js npm library for encrypting password -> (<a href="https://www.npmjs.com/package/crypto-js">Crypto-js Documentation</a>)
+- Used JWT (Json web token) for login implementation and keeping user signed in while surfing website -> (<a href="https://www.npmjs.com/package/jsonwebtoken">JWT Documentation</a>), <a href="https://jwt.io/">jwt.io</a>
 
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
