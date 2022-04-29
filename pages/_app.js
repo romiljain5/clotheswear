@@ -43,6 +43,8 @@ function MyApp({ Component, pageProps }) {
     localStorage.removeItem('token')
     setuser({value:null})
     setkey(Math.random())
+    // after logout they will be redirected to home page
+    router.push('/')
   }
 
   // to save in local storage
