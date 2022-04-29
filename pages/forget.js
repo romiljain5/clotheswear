@@ -1,7 +1,17 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 function forget() {
+  
+  // if the user is logged in it will redirect to home page
+  const router = useRouter()
+  useEffect(() => {
+    if(localStorage.getItem('token')){
+      router.push('/')
+    }
+  }, [])
+
   return (
     <div className="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8">

@@ -3,15 +3,23 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import { useState, useEffect } from 'react'
 import {useRouter} from 'next/router'
+import LoadingBar from 'react-top-loading-bar'
 
 function MyApp({ Component, pageProps }) {
   const [cart, setCart] = useState({})
   const [subtotal, setSubtotal] = useState(0)
-  const router = useRouter()
   const [user, setuser] = useState({value:null})
   const [key, setkey] = useState(0)
+  const [progress, setProgress] = useState(0)
+  const router = useRouter()
 
   useEffect(()=>{
+    router.events.on('routeChangeStart', ()=>{
+      setProgress(40)
+    })
+    router.events.on('routeChangeComplete', ()=>{
+      setProgress(100)
+    })
     console.log("run from _app.js")
     //if cart is their or not in localstoragee, if user visited earlier then it should be saved in localstorage
     try {
@@ -95,6 +103,13 @@ function MyApp({ Component, pageProps }) {
     saveCart({})
   }
   return (<>
+    <LoadingBar
+      color='#DC2626'
+      progress={progress}
+      waitingTime={400}
+      height={3}
+      onLoaderFinished={() => setProgress(0)}
+    />
     <Navbar logout={logout} user={user} key={key} cart={cart} addToCart={addToCart} removeFromCart={removeFromCart} clearCart={clearCart} subtotal={subtotal}/>
     {/* below component props gets pases to all */}
     <Component buyNow={buyNow} cart={cart} addToCart={addToCart} removeFromCart={removeFromCart} clearCart={clearCart} subtotal={subtotal} {...pageProps} /> 
