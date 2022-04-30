@@ -6,9 +6,9 @@ import 'react-toastify/dist/ReactToastify.css'
 import { useRouter } from 'next/router'
 
 const Signup = () => {
-  const [name, setName] = useState()
-  const [email, setEmail] = useState()
-  const [password, setPassword] = useState()
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
 
   // if the user is logged in it will redirect to home page
   const router = useRouter()
@@ -34,7 +34,7 @@ const Signup = () => {
     e.preventDefault()
     const data = {name, email, password}
 
-    let res = await fetch("http://localhost:3000/api/signup", {
+    let res = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/signup`, {
       method:"POST",
       headers: {
         'Content-Type':'application/json',

@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }) {
   const [cart, setCart] = useState({})
   const [subtotal, setSubtotal] = useState(0)
   const [user, setuser] = useState({value:null})
-  const [key, setkey] = useState(0)
+  const [key, setkey] = useState()
   const [progress, setProgress] = useState(0)
   const router = useRouter()
 
@@ -112,7 +112,7 @@ function MyApp({ Component, pageProps }) {
       height={3}
       onLoaderFinished={() => setProgress(0)}
     />
-    <Navbar logout={logout} user={user} key={key} cart={cart} addToCart={addToCart} removeFromCart={removeFromCart} clearCart={clearCart} subtotal={subtotal}/>
+    {key && <Navbar logout={logout} user={user} key={key} cart={cart} addToCart={addToCart} removeFromCart={removeFromCart} clearCart={clearCart} subtotal={subtotal}/>}
     {/* below component props gets pases to all */}
     <Component buyNow={buyNow} cart={cart} addToCart={addToCart} removeFromCart={removeFromCart} clearCart={clearCart} subtotal={subtotal} {...pageProps} /> 
     <Footer/>

@@ -12,7 +12,7 @@ const Checkout = ({cart, addToCart, removeFromCart, clearCart, subtotal}) => {
         <h2 className="text-gray-900 text-xl font-bold mb-1 font-medium title-font">
           Checkout
         </h2>
-        <p classNameName="leading-relaxed mb-5 text-gray-600">
+        <p className="leading-relaxed mb-5 text-gray-600">
           Please fill the details below
         </p>
         <div className="md:flex w-full md:space-x-5 mt-5">

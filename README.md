@@ -10,6 +10,15 @@ npm run dev
 yarn dev
 ```
 
+# Make .env.local file with following data in root folder
+- use NEXT_PUBLIC_NAME -> if you want to display/use link in public
+<a href="https://nextjs.org/docs/basic-features/environment-variables"> Read NextJs Documentation for environment variables </a>
+
+```bash
+MONGO_URI= mongodb://0.0.0.0:27017/clotheswear
+NEXT_PUBLIC_HOST=http://localhost:3000
+```
+
 ## Must known points
 - To use MongoDB database use Thunder client to GET, POST and update request via POST request
 - Make .env.local file in root folder and paste this MONGO_URI= mongodb://0.0.0.0:27017/clotheswear
@@ -20,6 +29,7 @@ yarn dev
 - Used JWT (Json web token) for login implementation and keeping user signed in while surfing website -> (<a href="https://www.npmjs.com/package/jsonwebtoken">JWT Documentation</a>), <a href="https://jwt.io/">jwt.io</a>
 - Used React top loading bar from npm -> <a href="https://www.npmjs.com/package/react-top-loading-bar">Click here</a>
 - Used NextJs routers like useRouter for navigating to different pages -> <a href="https://nextjs.org/docs/api-reference/next/router" >Documentation</a>
+
 
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.

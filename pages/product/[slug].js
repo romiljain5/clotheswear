@@ -15,7 +15,7 @@ const Post = ({buyNow, addToCart, products, variants}) => {
   
   // checks pincode availability through pincode.js api in api folder
   const checkAvailability = async () => {
-    const api = await fetch("http://localhost:3000/api/pincode");
+    const api = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/pincode`);
     const pins = await api.json();
     if (pins.includes(parseInt(pin))) {
       setAvail(true);
@@ -50,7 +50,7 @@ const Post = ({buyNow, addToCart, products, variants}) => {
   const [size, setSize] = useState(products.size)
 
   const refreshVariant = (newcolor, newsize) => {
-    let url = `http://localhost:3000/product/${variants[newsize][newcolor]['slug']}`
+    let url = `${process.env.NEXT_PUBLIC_HOST}/product/${variants[newsize][newcolor]['slug']}`
     // will reload page
     window.location = url
   }
