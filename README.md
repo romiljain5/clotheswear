@@ -10,7 +10,7 @@ npm run dev
 yarn dev
 ```
 
-# Make .env.local file with following data in root folder
+## Make .env.local file with following data in root folder
 - use NEXT_PUBLIC_NAME -> if you want to display/use link in public
 <a href="https://nextjs.org/docs/basic-features/environment-variables"> Read NextJs Documentation for environment variables </a>
 
