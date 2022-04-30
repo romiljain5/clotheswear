@@ -13,10 +13,15 @@ yarn dev
 ## Make .env.local file with following data in root folder
 - use NEXT_PUBLIC_NAME -> if you want to display/use link in public
 <a href="https://nextjs.org/docs/basic-features/environment-variables"> Read NextJs Documentation for environment variables </a>
+- In PAYTM_MID add link of your paytm MID
+- PAYTM_HOST to NEXT_PUBLIC_PAYTM_HOST if you are following another branch of payment 
 
 ```bash
 MONGO_URI= mongodb://0.0.0.0:27017/clotheswear
 NEXT_PUBLIC_HOST=http://localhost:3000
+PAYTM_HOST=https://securegw.paytm.in
+NEXT_PUBLIC_PAYTM_MID=
+PAYTM_MKEY=
 ```
 
 ## Must known points
@@ -29,6 +34,7 @@ NEXT_PUBLIC_HOST=http://localhost:3000
 - Used JWT (Json web token) for login implementation and keeping user signed in while surfing website -> (<a href="https://www.npmjs.com/package/jsonwebtoken">JWT Documentation</a>), <a href="https://jwt.io/">jwt.io</a>
 - Used React top loading bar from npm -> <a href="https://www.npmjs.com/package/react-top-loading-bar">Click here</a>
 - Used NextJs routers like useRouter for navigating to different pages -> <a href="https://nextjs.org/docs/api-reference/next/router" >Documentation</a>
+- Integrated Paytm gateway
 
 
 

@@ -112,7 +112,8 @@ function MyApp({ Component, pageProps }) {
       height={3}
       onLoaderFinished={() => setProgress(0)}
     />
-    {key && <Navbar logout={logout} user={user} key={key} cart={cart} addToCart={addToCart} removeFromCart={removeFromCart} clearCart={clearCart} subtotal={subtotal}/>}
+    {/* add - key && - below if navbar does not appears */}
+    {<Navbar logout={logout} user={user} key={key} cart={cart} addToCart={addToCart} removeFromCart={removeFromCart} clearCart={clearCart} subtotal={subtotal}/>}
     {/* below component props gets pases to all */}
     <Component buyNow={buyNow} cart={cart} addToCart={addToCart} removeFromCart={removeFromCart} clearCart={clearCart} subtotal={subtotal} {...pageProps} /> 
     <Footer/>
