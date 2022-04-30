@@ -19,6 +19,10 @@ MONGO_URI= mongodb://0.0.0.0:27017/clotheswear
 NEXT_PUBLIC_HOST=http://localhost:3000
 ```
 
+## Important links after enabling website 
+- http://localhost:3000/api/getproducts - to get products data
+- http://localhost:3000/ 
+
 ## Must known points
 - To use MongoDB database use Thunder client to GET, POST and update request via POST request
 - Make .env.local file in root folder and paste this MONGO_URI= mongodb://0.0.0.0:27017/clotheswear
